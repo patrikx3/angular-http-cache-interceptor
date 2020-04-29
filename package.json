@@ -6,7 +6,7 @@
         "prefix": "p3x-",
         "publish": true,
         "type": "p3x",
-        "code": "Legend",
+        "code": "Breeze",
         "nodejs": "v12.16.3",
         "opencollective": false,
         "reponame": "angular-http-cache-interceptor",
