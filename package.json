@@ -12,7 +12,7 @@
         "reponame": "angular-http-cache-interceptor",
         "build": true
     },
-    "description": "Cache every request in Angular, not only the GET, but all methods using as an interceptor, and allows you to interact with the interceptor via specific headers, that are will be not included in the request.",
+    "description": "\uD83D\uDCA3 Cache every request in Angular, not only the GET, but all methods using as an interceptor, and allows you to interact with the interceptor via specific headers, that are will be not included in the request.",
     "main": "index.js",
     "scripts": {
         "test": "grunt"
