@@ -1,6 +1,6 @@
 {
     "name": "p3x-angular-http-cache-interceptor",
-    "version": "2020.4.102",
+    "version": "2020.4.103",
     "corifeus": {
         "icon": "fas fa-fire",
         "prefix": "p3x-",
@@ -12,10 +12,16 @@
         "reponame": "angular-http-cache-interceptor",
         "build": true
     },
-    "description": "\uD83D\uDD25 Cache every request in Angular, not only the GET, but all methods using as an interceptor, and allows you to interact with the interceptor via specific headers, that are will be not included in the request.",
-    "main": "index.js",
+    "description": "🔥 Cache every request in Angular, not only the GET, but all methods using as an interceptor, and allows you to interact with the interceptor via specific headers, that are will be not included in the request.",
+    "private": true,
     "scripts": {
-        "test": "grunt"
+        "test": "grunt",
+        "ng": "ng",
+        "start": "ng serve",
+        "build": "ng build",
+        "test2": "ng test",
+        "lint": "ng lint",
+        "e2e": "ng e2e"
     },
     "repository": {
         "type": "git",
@@ -40,7 +46,41 @@
     },
     "homepage": "https://pages.corifeus.com/angular-http-cache-interceptor",
     "dependencies": {
-        "corifeus-builder": "^2020.4.169"
+        "@angular/animations": "~9.1.1",
+        "@angular/common": "~9.1.1",
+        "@angular/compiler": "~9.1.1",
+        "@angular/core": "~9.1.1",
+        "@angular/forms": "~9.1.1",
+        "@angular/platform-browser": "~9.1.1",
+        "@angular/platform-browser-dynamic": "~9.1.1",
+        "@angular/router": "~9.1.1",
+        "rxjs": "~6.5.4",
+        "tslib": "^1.10.0",
+        "zone.js": "~0.10.2"
+    },
+    "devDependencies": {
+        "corifeus-builder": "^2020.4.169",
+        "@angular-devkit/build-angular": "~0.901.1",
+        "@angular-devkit/build-ng-packagr": "~0.901.3",
+        "@angular/cli": "~9.1.1",
+        "@angular/compiler-cli": "~9.1.1",
+        "@angular/language-service": "~9.1.1",
+        "@types/node": "^12.11.1",
+        "@types/jasmine": "~3.5.0",
+        "@types/jasminewd2": "~2.0.3",
+        "codelyzer": "^5.1.2",
+        "jasmine-core": "~3.5.0",
+        "jasmine-spec-reporter": "~4.2.1",
+        "karma": "~4.4.1",
+        "karma-chrome-launcher": "~3.1.0",
+        "karma-coverage-istanbul-reporter": "~2.1.0",
+        "karma-jasmine": "~3.0.1",
+        "karma-jasmine-html-reporter": "^1.4.2",
+        "ng-packagr": "^9.0.0",
+        "protractor": "~5.4.3",
+        "ts-node": "~8.3.0",
+        "tslint": "~6.1.0",
+        "typescript": "~3.8.3"
     },
     "engines": {
         "node": ">=12.13.0"
