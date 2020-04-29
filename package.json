@@ -21,7 +21,9 @@
         "build": "ng build",
         "test2": "ng test",
         "lint": "ng lint",
-        "e2e": "ng e2e"
+        "e2e": "ng e2e",
+        "build-lib": "ng build --project angular-http-cache-interceptor && cp README.md ./dist/angular-http-cache-interceptor",
+        "build-app": "ng build --prod --source-map=false --extract-css=true --output-hashing=all --configuration=production --deploy-url=/ --base-href=/ --aot=true --build-optimizer=true --optimization=true"
     },
     "repository": {
         "type": "git",

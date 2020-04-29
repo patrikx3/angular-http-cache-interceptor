@@ -1,9 +1,46 @@
 {
-  "name": "angular-http-cache-interceptor",
-  "version": "0.0.1",
+  "name": "p3x-angular-http-cache-interceptor",
+  "version": "2020.4.103",
+  "corifeus": {
+    "icon": "fas fa-fire",
+    "prefix": "p3x-",
+    "publish": true,
+    "type": "p3x",
+    "code": "Breeze",
+    "nodejs": "v12.16.3",
+    "opencollective": false,
+    "reponame": "angular-http-cache-interceptor",
+    "build": true
+  },
+  "description": "🔥 Cache every request in Angular, not only the GET, but all methods using as an interceptor, and allows you to interact with the interceptor via specific headers, that are will be not included in the request.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrikx3/angular-http-cache-interceptor.git"
+  },
+  "keywords": [
+    "angular",
+    "cache",
+    "interceptor",
+    "network",
+    "http",
+    "client",
+    "http-client",
+    "header",
+    "headers",
+    "interact"
+  ],
+  "author": "Patrik Laszlo <alabard@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patrikx3/angular-http-cache-interceptor/issues"
+  },
+  "homepage": "https://pages.corifeus.com/angular-http-cache-interceptor",
   "peerDependencies": {
     "@angular/common": "^9.1.3",
     "@angular/core": "^9.1.3",
     "tslib": "^1.10.0"
+  },
+  "engines": {
+    "node": ">=12.13.0"
   }
 }
