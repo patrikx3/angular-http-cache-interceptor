@@ -41,6 +41,8 @@ https://nodejs.org/en/download/package-manager/
 [//]: #@corifeus-header:end
 
 
+Based on [@d4h/angular-http-cache](https://www.npmjs.com/package/@d4h/angular-http-cache), but it works without any configuration. 
+
 In development ...
 
 

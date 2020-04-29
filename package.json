@@ -40,7 +40,7 @@
     },
     "homepage": "https://pages.corifeus.com/angular-http-cache-interceptor",
     "dependencies": {
-        "corifeus-builder": "^2020.4.168"
+        "corifeus-builder": "^2020.4.169"
     },
     "engines": {
         "node": ">=12.13.0"
