@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { P3XHttpCacheInterceptorModule  } from '../../projects/angular-http-cache-interceptor/src/lib/http-cache-interceptor.module';
+//import { P3XHttpCacheInterceptorModule  } from '../../projects/angular-http-cache-interceptor/src/lib/http-cache-interceptor.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-//import { P3XHttpCacheInterceptorModule  } from 'p3x-interceptor'
+import { P3XHttpCacheInterceptorModule  } from 'p3x-interceptor'
 
 //import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import { MatSnackBarModule} from "@angular/material/snack-bar";
