@@ -1,17 +1,18 @@
 {
     "name": "p3x-angular-http-cache-interceptor",
-    "version": "2020.4.245",
+    "version": "2020.4.262",
     "corifeus": {
         "icon": "fas fa-fire",
         "prefix": "p3x-",
-        "publish": false,
+        "publish": true,
         "type": "p3x",
         "code": "Breeze",
         "nodejs": "v12.16.3",
         "opencollective": false,
         "reponame": "angular-http-cache-interceptor",
         "build": true,
-        "cdn": true
+        "cdn": true,
+        "publish-location": "./release/angular-http-cache-interceptor"
     },
     "description": "🔥 Cache every request in Angular, not only the GET, but all methods using as an interceptor, and allows you to interact with the interceptor via specific headers, that are will be not included in the request.",
     "scripts": {
@@ -22,7 +23,7 @@
         "test2": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
-        "build-lib": "grunt && ng build --prod --project angular-http-cache-interceptor && cp README.md ./release/angular-http-cache-interceptor && cp LICENSE ./release/angular-http-cache-interceptor",
+        "build-lib": "ng build --prod --project angular-http-cache-interceptor && cp README.md ./release/angular-http-cache-interceptor && cp LICENSE ./release/angular-http-cache-interceptor && ./scripts/post-lib-build.js",
         "build-app": "ng build --prod --source-map=false --extract-css=true --output-hashing=all --configuration=production --deploy-url=/ --base-href=/ --aot=true --build-optimizer=true --optimization=true"
     },
     "repository": {
@@ -56,6 +57,7 @@
         "@angular/platform-browser": "~9.1.4",
         "@angular/platform-browser-dynamic": "~9.1.4",
         "@angular/router": "~9.1.4",
+        "p3x-interceptor": "npm:p3x-angular-http-cache-interceptor@^2020.4.260",
         "rxjs": "~6.5.5",
         "tslib": "^1.11.1",
         "zone.js": "~0.10.3"

@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import { AngularHttpCacheInterceptorModule } from '../../projects/angular-http-cache-interceptor/src/lib/angular-http-cache-interceptor.module'
+//import { P3XHttpCacheInterceptorModule  } from '../../projects/angular-http-cache-interceptor/src/lib/http-cache-interceptor.module'
+import { P3XHttpCacheInterceptorModule  } from 'p3x-interceptor'
 
 @NgModule({
   declarations: [
@@ -11,9 +12,10 @@ import { AngularHttpCacheInterceptorModule } from '../../projects/angular-http-c
   ],
   imports: [
     BrowserModule,
-    AngularHttpCacheInterceptorModule,
+    P3XHttpCacheInterceptorModule,
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

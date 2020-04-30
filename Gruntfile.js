@@ -43,26 +43,14 @@ module.exports = (grunt) => {
       const pkgName = path.resolve(`./projects/angular-http-cache-interceptor/package.json`)
 
       let pkg = require(pkgName)
-      pkg.devDependencies = pkg.devDependencies || {}
       pkg.name = rootPkgName.name
-      pkg.devDependencies['corifeus-builder'] = rootPkgName.devDependencies['corifeus-builder']
       pkg.corifeus = {
-        publish: true,
         install: false
       }
-
-      delete rootPkgName.devDependencies
-      delete rootPkgName.dependencies
-      delete rootPkgName.corifeus
-      delete rootPkgName.scripts
-      delete rootPkgName.private
-      pkg = Object.assign(pkg, rootPkgName)
       const data = JSON.stringify(pkg, null, 4)
       await fs.writeFile(pkgName, data)
       done()
-
     } catch (e) {
-      console.error(e)
       done(e)
     }
   });
