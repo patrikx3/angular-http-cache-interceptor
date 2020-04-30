@@ -11,7 +11,7 @@
 
 
 
-# 🔥 Cache every request in Angular, not only the GET, but all methods using as an interceptor, and allows you to interact with the interceptor via specific headers, that are will be not included in the request. v2020.4.285
+# 🔥 Cache every request in Angular, not only the GET, but all methods using as an interceptor, and allows you to interact with the interceptor via specific headers, that are will be not included in the request. v2020.4.286
 
 
 
@@ -52,6 +52,23 @@ Based on [@d4h/angular-http-cache](https://www.npmjs.com/package/@d4h/angular-ht
 -->
 
 Usually, you do not cache all requests, but only the `GET` method. But, some clients, it is required to cache everything, including all methods. So, this micro-service does that.
+  
+The way, we can find out what we are caching it is not simple. Usually, you would cache by a key of the `httpRequest.urlWithParams` and only `GET`.
+
+The way this package is caching by the key the request is using the `object-hash` package with the following algorithm:
+```ts
+import * as hash from 'object-hash'
+
+const hashOptions = {
+  algorithm: 'md5',
+  encoding: 'hex'
+}
+
+httpToKey(httpRequest: HttpRequest<any>) {
+    const key = httpRequest.method + '@' + httpRequest.urlWithParams + '@' + hash(httpRequest.params, hashOptions) + '@' + hash(httpRequest.body, hashOptions)
+    return key
+}
+```
 
 There is room in the future, to restrict to specific methods and more configurations. if there is a request for this micro-service, it could be enhanced, but for now, it is caching all, with the exception when you include the `CachingHeaders.NoCache` header into your request (with any data you specify, see how it works below). 
 
@@ -64,7 +81,7 @@ https://angular-http-cache-interceptor.corifeus.com
 npm i p3x-angular-http-cache-interceptor object-hash @types/object-hash
 ```
 
-## Include the caching interceptor into you Angular module
+## Include the caching interceptor into your Angular module
 ```js
 import { NgModule } from '@angular/core';
 
@@ -156,7 +173,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-ANGULAR-HTTP-CACHE-INTERCEPTOR**](https://pages.corifeus.com/angular-http-cache-interceptor) Build v2020.4.285
+[**P3X-ANGULAR-HTTP-CACHE-INTERCEPTOR**](https://pages.corifeus.com/angular-http-cache-interceptor) Build v2020.4.286
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
