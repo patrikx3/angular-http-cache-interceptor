@@ -11,7 +11,7 @@
 
 
 
-# 🔥 Cache every request in Angular, not only the GET, but all methods using as an interceptor, and allows you to interact with the interceptor via specific headers, that are will be not included in the request. v2020.4.262
+# 🔥 Cache every request in Angular, not only the GET, but all methods using as an interceptor, and allows you to interact with the interceptor via specific headers, that are will be not included in the request. v2020.4.263
 
 
 
@@ -81,7 +81,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-ANGULAR-HTTP-CACHE-INTERCEPTOR**](https://pages.corifeus.com/angular-http-cache-interceptor) Build v2020.4.262
+[**P3X-ANGULAR-HTTP-CACHE-INTERCEPTOR**](https://pages.corifeus.com/angular-http-cache-interceptor) Build v2020.4.263
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
