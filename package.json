@@ -1,6 +1,6 @@
 {
     "name": "p3x-angular-http-cache-interceptor",
-    "version": "2020.4.271",
+    "version": "2020.4.272",
     "corifeus": {
         "icon": "fas fa-fire",
         "prefix": "p3x-",
@@ -40,7 +40,8 @@
         "http-client",
         "header",
         "headers",
-        "interact"
+        "interact",
+        "configuration"
     ],
     "author": "Patrik Laszlo <alabard@gmail.com>",
     "license": "MIT",
