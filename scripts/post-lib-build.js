@@ -4,7 +4,7 @@ const fs = require('fs').promises
 const execAsync = async () => {
   const rootPkgName = __dirname + '/../package.json'
   const rootPkg = require(rootPkgName)
-  const pkgName = __dirname + '/../release/angular-http-cache-interceptor/package.json'
+  const pkgName = __dirname + '/../dist/angular-http-cache-interceptor/package.json'
 
   let pkg = require(pkgName)
   pkg.devDependencies = pkg.devDependencies || {}
