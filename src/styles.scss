@@ -30,18 +30,18 @@ $workspace-theme: mat-light-theme($workspace-primary, $workspace-accent, $worksp
 @include mat-divider-theme($workspace-theme);
 //@include mat-progress-spinner-theme($workspace-theme);
 @include mat-toolbar-theme(mat-light-theme(
-    mat-palette($mat-blue-grey),
+    mat-palette($mat-brown),
     mat-palette($mat-deep-orange),
     mat-palette($mat-green)
 ));
 @include mat-snack-bar-theme(mat-light-theme(
     mat-palette($mat-brown, 400),
-    mat-palette($mat-blue),
+    mat-palette($mat-brown, 300),
     mat-palette($mat-green)
 ));
 @include mat-button-theme( mat-light-theme(
-    mat-palette($mat-cyan),
-    mat-palette($mat-light-blue),
+    mat-palette($mat-green, 600),
+    mat-palette($mat-deep-orange),
     mat-palette($mat-green)
 ));
 @include mat-card-theme($workspace-theme);
