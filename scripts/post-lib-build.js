@@ -22,7 +22,7 @@ const execAsync = async () => {
   const data = JSON.stringify(pkg, null, 4)
   await fs.writeFile(pkgName, data)
 
-  const finalRootPkgName = require('../package.json')
+  const finalRootPkgName = JSON.parse((await fs.readFile('../package.json')).toString())
   finalRootPkgName.dependencies['p3x-interceptor'] = `npm:p3x-angular-http-cache-interceptor@^${finalRootPkgName.version}`
 
   const finalRootPkgNameData = JSON.stringify(pkg, null, 4)
