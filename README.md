@@ -135,7 +135,11 @@ export class AppComponent {
 ```
 
 You may refer how it works on Github:  
-
+https://github.com/patrikx3/angular-http-cache-interceptor/blob/master/src/app/app.module.ts  
+  
+https://github.com/patrikx3/angular-http-cache-interceptor/blob/master/src/app/app.component.ts
+  
+https://github.com/patrikx3/angular-http-cache-interceptor/blob/master/src/app/app.component.html  
 
 [//]: #@corifeus-footer
 
