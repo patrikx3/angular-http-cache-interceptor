@@ -2,7 +2,8 @@
 const fs = require('fs').promises
 
 const execAsync = async () => {
-  const rootPkg = require('../package.json')
+  const rootPkgName = __dirname + '/../package.json'
+  const rootPkg = require(rootPkgName)
   const pkgName = __dirname + '/../release/angular-http-cache-interceptor/package.json'
 
   let pkg = require(pkgName)
@@ -22,12 +23,11 @@ const execAsync = async () => {
   const data = JSON.stringify(pkg, null, 4)
   await fs.writeFile(pkgName, data)
 
-  const finalRootPkg = JSON.parse((await fs.readFile('../package.json')).toString())
+  const finalRootPkg = JSON.parse((await fs.readFile(rootPkgName)).toString())
   finalRootPkg.dependencies['p3x-interceptor'] = `npm:p3x-angular-http-cache-interceptor@^${finalRootPkg.version}`
 
   const finalRootPkgNameData = JSON.stringify(finalRootPkg, null, 4)
-  console.log(finalRootPkgNameData)
-  await fs.writeFile('../package.json', finalRootPkgNameData)
+  await fs.writeFile(rootPkgName, finalRootPkgNameData)
 
 }
 
