@@ -11,7 +11,7 @@
 
 
 
-# 🔥 Cache every request in Angular, not only the GET, but all methods using as an interceptor, and allows you to interact with the interceptor via specific headers, that are will be not included in the request. v2020.4.268
+# 🔥 Cache every request in Angular, not only the GET, but all methods using as an interceptor, and allows you to interact with the interceptor via specific headers, that are will be not included in the request. v2020.4.269
 
 
 
@@ -53,7 +53,7 @@ Based on [@d4h/angular-http-cache](https://www.npmjs.com/package/@d4h/angular-ht
 
 Usually, you do not cache all requests, but only the `GET` method. But, some clients, it is required to cache everything, including all methods. So this micro-service does that.
 
-There is room in the future, to restrict to specific methods and more configurations, if there is a request for this micro-service, but for now it is caching all, with the except if you add the `CachingHeaders.NoCache` into your request. 
+There is room in the future, to restrict to specific methods and more configurations, if there is a request for this micro-service, but for now, it is caching all, with the exception when you the `CachingHeaders.NoCache` header into your request (with any data you specify). 
 
 # Example web page that uses this package
 https://angular-http-cache-interceptor.corifeus.com
@@ -156,7 +156,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-ANGULAR-HTTP-CACHE-INTERCEPTOR**](https://pages.corifeus.com/angular-http-cache-interceptor) Build v2020.4.268
+[**P3X-ANGULAR-HTTP-CACHE-INTERCEPTOR**](https://pages.corifeus.com/angular-http-cache-interceptor) Build v2020.4.269
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
