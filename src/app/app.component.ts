@@ -3,8 +3,10 @@ import { Component } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import {MatSnackBar} from "@angular/material/snack-bar";
 
-//import { CachingHeaders} from "../../projects/angular-http-cache-interceptor/src/lib/caching-headers.enum";
-import { CachingHeaders} from "p3x-interceptor";
+import { CachingHeaders} from "../../projects/angular-http-cache-interceptor/src/lib/caching-headers.enum";
+//import { CachingHeaders} from "p3x-interceptor";
+
+import { version } from '../../package.json';
 
 @Component({
   selector: 'p3x-root',
@@ -12,6 +14,8 @@ import { CachingHeaders} from "p3x-interceptor";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  public version: string = version;
 
   constructor(
     private http: HttpClient,
