@@ -17,8 +17,8 @@
     ],
     "paths": {
       "angular-http-cache-interceptor": [
-        "dist/angular-http-cache-interceptor/angular-http-cache-interceptor",
-        "dist/angular-http-cache-interceptor"
+        "release/angular-http-cache-interceptor/angular-http-cache-interceptor",
+        "release/angular-http-cache-interceptor"
       ]
     }
   },
