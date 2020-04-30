@@ -11,7 +11,7 @@
 
 
 
-# 🔥 Cache every request in Angular, not only the GET, but all methods using as an interceptor, and allows you to interact with the interceptor via specific headers, that are will be not included in the request. v2020.4.288
+# 🔥 Cache every request in Angular, not only the GET, but all methods using as an interceptor, and allows you to interact with the interceptor via specific headers, that are will be not included in the request. v2020.4.289
 
 
 
@@ -51,11 +51,11 @@ https://nodejs.org/en/download/package-manager/
 Based on [@d4h/angular-http-cache](https://www.npmjs.com/package/@d4h/angular-http-cache), but it works without any configuration and a different implementation, so they are not the same at all, but the idea is the same.
 -->
 
-Usually, you do not cache all requests, but only the `GET` method. But, some clients, it is required to cache everything, including all methods. So, this micro-service does that.
+Usually, you do not cache all requests, but only the `GET` method. But, some clients/companies, require to cache everything, including all methods. So, this micro-service does that.
   
-The way, we can find out what we are caching it is not simple. Usually, you would cache by a key of the `httpRequest.urlWithParams` and only `GET`.
+The way, we can find out what we are caching it is not simple. Usually, you would cache by a key of the `httpRequest.urlWithParams` and only the `GET` HTTP method.
 
-The way this package is caching by the key the request is using the `object-hash` package with the following algorithm:
+The way this package is caching the requests is implemented by the following key. To create the key this package is using the `object-hash` package with the following algorithm:
 ```ts
 import * as hash from 'object-hash'
 
@@ -173,7 +173,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-ANGULAR-HTTP-CACHE-INTERCEPTOR**](https://pages.corifeus.com/angular-http-cache-interceptor) Build v2020.4.288
+[**P3X-ANGULAR-HTTP-CACHE-INTERCEPTOR**](https://pages.corifeus.com/angular-http-cache-interceptor) Build v2020.4.289
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
