@@ -3,3 +3,4 @@
  */
 
 export * from './lib/http-cache-interceptor.module';
+export * from './lib/caching-headers.enum'

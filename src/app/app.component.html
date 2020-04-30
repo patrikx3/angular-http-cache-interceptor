@@ -1,1 +1,36 @@
-test
+<mat-toolbar color="primary" [class.mat-elevation-z10]="true">
+  P3X Angular HTTP Cache Interceptor
+</mat-toolbar>
+
+<div style="margin: 25px;">
+  <mat-card>
+    <div>
+      <button mat-raised-button color="primary" (click)="loadCached()">Load cached data</button>
+      <br/>
+      <br/>
+      <div class="mat-caption">Itt will try to load some random data with cached data.</div>
+    </div>
+    <br/>
+    <mat-divider></mat-divider>
+    <br/>
+    <div>
+      <button mat-raised-button color="primary" (click)="loadNonCached()">Load data with disabled cache</button>
+      <br/>
+      <br/>
+      <div class="mat-caption">It will try to load some random data without cache.</div>
+    </div>
+    <br/>
+    <mat-divider></mat-divider>
+    <br/>
+    <div>
+      <a mat-button color="accent" href="https://pages.corifeus.com/angular-http-cache-interceptor" target="_blank">Corifeus pages</a>
+    </div>
+    <br/>
+    <mat-divider></mat-divider>
+    <br/>
+    <div>
+      <a mat-button color="accent" href="https://github.com/patrikx3/angular-http-cache-interceptor" target="_blank">GitHub</a>
+
+    </div>
+  </mat-card>
+</div>

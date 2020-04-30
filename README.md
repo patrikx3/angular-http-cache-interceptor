@@ -11,7 +11,7 @@
 
 
 
-# 🔥 Cache every request in Angular, not only the GET, but all methods using as an interceptor, and allows you to interact with the interceptor via specific headers, that are will be not included in the request. v2020.4.263
+# 🔥 Cache every request in Angular, not only the GET, but all methods using as an interceptor, and allows you to interact with the interceptor via specific headers, that are will be not included in the request. v2020.4.267
 
 
 
@@ -47,23 +47,94 @@ https://nodejs.org/en/download/package-manager/
                         
 [//]: #@corifeus-header:end
 
+<!--
+Based on [@d4h/angular-http-cache](https://www.npmjs.com/package/@d4h/angular-http-cache), but it works without any configuration and a different implementation, so they are not the same at all, but the idea is the same.
+-->
 
-Based on [@d4h/angular-http-cache](https://www.npmjs.com/package/@d4h/angular-http-cache), but it works without any configuration. 
+Usually, you do not cache all requests, but only the `GET` method. But, some clients, it is required to cache everything, including all methods. So this micro-service does that.
 
-Usually, you do not cache all requests, but only the `GET` method. For some clients, it is required to cache everything, including other methods as well.
+There is room in the future, to restrict to specific methods and more configurations, if there is a request for this micro-service, but for now it is an all or nothing (if you add in the `CachingHeaders.NoCache`. 
 
-There is a room in the future, to restrict to specific methods and more configurations, if there is a request for this micro-service. 
-
-# Example web page
+# Example web page that uses this package
 https://angular-http-cache-interceptor.corifeus.com
 
 # How to use it
 
 ```bash
-npm i p3x-angular-http-cache-interceptor
+npm i p3x-angular-http-cache-interceptor object-hash @types/object-hash
 ```
 
-In development ...
+## Include the caching interceptor into you Angular module
+```js
+import { NgModule } from '@angular/core';
+
+import { P3XHttpCacheInterceptorModule  } from 'p3x-angular-http-cache-interceptor';
+
+@NgModule({
+  declarations: [
+  ],
+  imports: [
+    P3XHttpCacheInterceptorModule,
+  ],
+  providers: [
+  ],
+  bootstrap: []
+})
+export class SomeModule { }
+```
+
+## Example invocation in a component
+
+With and without cache:
+```ts
+import { Component } from '@angular/core';
+
+import { HttpClient } from "@angular/common/http";
+import {MatSnackBar} from "@angular/material/snack-bar";
+
+import { CachingHeaders } from 'p3x-angular-http-cache-interceptor'
+
+@Component({
+  selector: 'p3x-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent {
+
+  constructor(
+    private http: HttpClient,
+    private snack: MatSnackBar,
+  ) {
+  }
+
+  async loadCached() {
+    try {
+      const response : any = await this.http.get('https://server.patrikx3.com/api/core/util/random/32').toPromise()
+      this.snack.open(`Will be always the same: ${response.random}`, 'OK')
+    } catch(e) {
+      this.snack.open(`Sorry, error happened, check the consle for the error`, 'OK')
+      console.error(e)
+    }
+  }
+
+  async loadNonCached() {
+    try {
+      const response : any = await this.http.get('https://server.patrikx3.com/api/core/util/random/32', {
+        headers: {
+          [CachingHeaders.NoCache]: '1'
+        }
+      }).toPromise()
+      this.snack.open(`Truly random data: ${response.random}`, 'OK')
+    } catch(e) {
+      this.snack.open(`Sorry, error happened, check the console for the error`, 'OK')
+      console.error(e)
+    }
+  }
+
+}
+```
+
+You may refer how it works on Github:  
 
 
 [//]: #@corifeus-footer
@@ -81,7 +152,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-ANGULAR-HTTP-CACHE-INTERCEPTOR**](https://pages.corifeus.com/angular-http-cache-interceptor) Build v2020.4.263
+[**P3X-ANGULAR-HTTP-CACHE-INTERCEPTOR**](https://pages.corifeus.com/angular-http-cache-interceptor) Build v2020.4.267
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
