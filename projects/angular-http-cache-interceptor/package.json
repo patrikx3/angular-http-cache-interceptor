@@ -8,7 +8,7 @@
         "tslib": "^1.11.1"
     },
     "corifeus": {
-        "install{removed}": false
+        "install": false
     },
     "devDependencies": {
         "corifeus-builder": "^2020.4.177"
