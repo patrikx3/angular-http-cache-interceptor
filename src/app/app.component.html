@@ -1,29 +1,29 @@
 <mat-toolbar color="primary" [class.mat-elevation-z1]="true">
-  <span class="mat-body-strong">P3X Angular HTTP Cache Interceptor v{{ version }}</span>
+  <span class="mat-body-strong ellipsis">P3X Angular HTTP Cache Interceptor v{{ version }}</span>
 </mat-toolbar>
 
 <div style="margin: 25px;">
   <mat-card>
-    <div>
-      <button mat-flat-button color="primary" (click)="loadCached()">Load cached data</button>
+    <div class="list-item-fix">
+      <button mat-flat-button color="primary" (click)="loadCached()">Cached request</button>
       <br/>
       <br/>
-      <div class="mat-caption">Itt will try to load some random data with cached data.</div>
+      <div class="mat-caption">Itt will try to load some random data with cached data. You can see in the browser inspector network tab, that there will be only one request.</div>
+    </div>
+    <br/>
+    <mat-divider></mat-divider>
+    <br/>
+    <div class="list-item-fix">
+      <button mat-flat-button color="primary"  (click)="loadNonCached()">Non cached request</button>
+      <br/>
+      <br/>
+      <div class="mat-caption">It will try to load some random data without cache. You can see in the browser inspector network tab, that every click will talk to a server and retrieve the new data.</div>
     </div>
     <br/>
     <mat-divider></mat-divider>
     <br/>
     <div>
-      <button mat-flat-button color="primary" (click)="loadNonCached()">Load data with disabled cache</button>
-      <br/>
-      <br/>
-      <div class="mat-caption">It will try to load some random data without cache.</div>
-    </div>
-    <br/>
-    <mat-divider></mat-divider>
-    <br/>
-    <div>
-      <a mat-button color="accent" href="https://pages.corifeus.com/angular-http-cache-interceptor" target="_blank">Corifeus pages Wiki about this package and info</a>
+      <a mat-button color="accent" class="mat-button-wrapping" href="https://pages.corifeus.com/angular-http-cache-interceptor" target="_blank">Corifeus P3X Angular HTTP Cache Interceptor</a>
     </div>
     <br/>
     <mat-divider></mat-divider>

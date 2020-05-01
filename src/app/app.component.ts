@@ -26,7 +26,7 @@ export class AppComponent {
   async loadCached() {
     try {
       const response : any = await this.http.get('https://server.patrikx3.com/api/core/util/random/32').toPromise()
-      this.snack.open(`Will be always the same: ${response.random}`, 'OK')
+      this.snack.open(`Will be always the same output: ${response.random}`, 'OK')
     } catch(e) {
       this.snack.open(`Sorry, error happened, check the consle for the error`, 'OK')
       console.error(e)
@@ -35,7 +35,7 @@ export class AppComponent {
 
   async loadNonCached() {
     try {
-      const response : any = await this.http.get('https://server.patrikx3.com/api/core/util/random/32', {
+      const response : any = await this.http.get('https://server.patrikx3.com/api/core/util/random/16', {
         headers: {
           [CachingHeaders.NoCache]: '1'
         }

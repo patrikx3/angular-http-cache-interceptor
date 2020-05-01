@@ -1,6 +1,6 @@
 {
     "name": "p3x-angular-http-cache-interceptor",
-    "version": "2020.4.292",
+    "version": "2020.4.293",
     "corifeus": {
         "icon": "fas fa-fire",
         "prefix": "p3x-",
@@ -51,12 +51,12 @@
     "homepage": "https://pages.corifeus.com/angular-http-cache-interceptor",
     "dependencies": {
         "@angular/animations": "~9.1.4",
-        "@angular/cdk": "^9.2.1",
+        "@angular/cdk": "^9.2.2",
         "@angular/common": "~9.1.4",
         "@angular/compiler": "~9.1.4",
         "@angular/core": "~9.1.4",
         "@angular/forms": "~9.1.4",
-        "@angular/material": "^9.2.1",
+        "@angular/material": "^9.2.2",
         "@angular/platform-browser": "~9.1.4",
         "@angular/platform-browser-dynamic": "~9.1.4",
         "@angular/router": "~9.1.4",
@@ -64,7 +64,7 @@
         "hash": "^0.2.1",
         "object": "^0.1.1",
         "object-hash": "^2.0.3",
-        "p3x-interceptor": "npm:p3x-angular-http-cache-interceptor@^2020.4.292",
+        "p3x-interceptor": "npm:p3x-angular-http-cache-interceptor@^2020.4.293",
         "rxjs": "~6.5.5",
         "tslib": "^1.11.1",
         "zone.js": "~0.10.3"

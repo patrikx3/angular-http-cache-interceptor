@@ -1,0 +1,14 @@
+.list-item-fix {
+  padding-left: 15px;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mat-button-wrapping.mat-button {
+  white-space: normal !important;
+  text-align: left;
+}
