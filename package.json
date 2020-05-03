@@ -1,6 +1,6 @@
 {
     "name": "p3x-angular-http-cache-interceptor",
-    "version": "2020.4.297",
+    "version": "2020.4.300",
     "corifeus": {
         "icon": "fas fa-fire",
         "prefix": "p3x-",
@@ -64,13 +64,13 @@
         "hash": "^0.2.1",
         "object": "^0.1.1",
         "object-hash": "^2.0.3",
-        "p3x-interceptor": "npm:p3x-angular-http-cache-interceptor@^2020.4.296",
+        "p3x-interceptor": "npm:p3x-angular-http-cache-interceptor@^2020.4.299",
         "rxjs": "~6.5.5",
         "tslib": "^1.11.1",
         "zone.js": "~0.10.3"
     },
     "devDependencies": {
-        "corifeus-builder": "^2020.4.179",
+        "corifeus-builder": "^2020.4.194",
         "@angular-devkit/build-angular": "~0.901.4",
         "@angular-devkit/build-ng-packagr": "~0.901.4",
         "@angular/cli": "~9.1.4",
@@ -84,12 +84,12 @@
         "jasmine-spec-reporter": "~5.0.2",
         "karma": "~5.0.4",
         "karma-chrome-launcher": "~3.1.0",
-        "karma-coverage-istanbul-reporter": "~2.1.1",
+        "karma-coverage-istanbul-reporter": "~3.0.0",
         "karma-jasmine": "~3.1.1",
         "karma-jasmine-html-reporter": "^1.5.3",
         "ng-packagr": "^9.1.2",
         "protractor": "~5.4.4",
-        "ts-node": "~8.9.1",
+        "ts-node": "~8.10.1",
         "tslint": "~6.1.2",
         "typescript": "~3.8.3"
     },
