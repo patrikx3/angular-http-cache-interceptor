@@ -28,7 +28,7 @@ export class AppComponent {
       const response : any = await this.http.get('https://server.patrikx3.com/api/core/util/random/32').toPromise()
       this.snack.open(`Will be always the same output: ${response.random}`, 'OK')
     } catch(e) {
-      this.snack.open(`Sorry, error happened, check the consle for the error`, 'OK')
+      this.snack.open(`Sorry, error happened, check the console for the error`, 'OK')
       console.error(e)
     }
   }
