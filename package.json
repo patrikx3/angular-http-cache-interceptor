@@ -1,6 +1,6 @@
 {
     "name": "p3x-angular-http-cache-interceptor",
-    "version": "2020.4.303",
+    "version": "2020.4.304",
     "corifeus": {
         "icon": "fas fa-fire",
         "prefix": "p3x-",
@@ -68,7 +68,7 @@
         "rxjs": "~6.5.5",
         "tslib": "^1.11.1",
         "zone.js": "~0.10.3",
-        "p3x-interceptor": "npm:p3x-angular-http-cache-interceptor@^2020.4.303"
+        "p3x-interceptor": "npm:p3x-angular-http-cache-interceptor@^2020.4.304"
     },
     "devDependencies": {
         "@angular-devkit/build-angular": "~0.901.4",
