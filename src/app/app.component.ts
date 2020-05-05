@@ -1,50 +1,45 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
-import { HttpClient } from "@angular/common/http";
-import {MatSnackBar} from "@angular/material/snack-bar";
 
-import { CachingHeaders} from "../../projects/angular-http-cache-interceptor/src/lib/caching-headers.enum";
-//import { CachingHeaders} from "p3x-interceptor";
-
-import { version } from '../../package.json';
+import {version} from '../../package.json';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'p3x-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   public version: string = version;
 
-  constructor(
-    private http: HttpClient,
-    private snack: MatSnackBar,
-  ) {
+  navLinks: any[];
+  activeLinkIndex = -1;
+
+  constructor(private router: Router) {
+
+    this.navLinks = [
+      {
+        label: 'Default',
+        link: './default',
+        index: 0
+      }, {
+        label: 'Configured caching',
+        link: './cache',
+        index: 1
+      }, {
+        label: 'Configured non-caching',
+        link: './non-cache',
+        index: 2
+      },
+    ];
   }
 
-  async loadCached() {
-    try {
-      const response : any = await this.http.get('https://server.patrikx3.com/api/core/util/random/32').toPromise()
-      this.snack.open(`Will be always the same output: ${response.random}`, 'OK')
-    } catch(e) {
-      this.snack.open(`Sorry, error happened, check the console for the error`, 'OK')
-      console.error(e)
-    }
+  ngOnInit(): void {
+    this.router.events.subscribe((res) => {
+      this.activeLinkIndex = this.navLinks.indexOf(this.navLinks.find(tab => tab.link === '.' + this.router.url));
+    });
   }
 
-  async loadNonCached() {
-    try {
-      const response : any = await this.http.get('https://server.patrikx3.com/api/core/util/random/16', {
-        headers: {
-          [CachingHeaders.NoCache]: '1'
-        }
-      }).toPromise()
-      this.snack.open(`Truly random data: ${response.random}`, 'OK')
-    } catch(e) {
-      this.snack.open(`Sorry, error happened, check the console for the error`, 'OK')
-      console.error(e)
-    }
-  }
 
 }

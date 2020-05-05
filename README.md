@@ -11,7 +11,7 @@
 
 
 
-# 🔥 Cache every request in Angular, not only the GET, but all methods of this interceptor, and allows you to interact with the interceptor via specific headers and modify the request, and these specific headers will be not included in the final request. v2020.4.300
+# 🔥 Cache every request in Angular, not only the GET, but all methods of this interceptor, and allows you to interact with the interceptor via specific headers and modify the request, and these specific headers will be not included in the final request. v2020.4.303
 
 
 
@@ -82,7 +82,7 @@ npm i p3x-angular-http-cache-interceptor object-hash @types/object-hash
 ```
 
 ## Include the caching interceptor into your Angular module
-```js
+```ts
 import { NgModule } from '@angular/core';
 
 import { P3XHttpCacheInterceptorModule  } from 'p3x-angular-http-cache-interceptor';
@@ -98,6 +98,27 @@ import { P3XHttpCacheInterceptorModule  } from 'p3x-angular-http-cache-intercept
   bootstrap: []
 })
 export class SomeModule { }
+```
+
+### Options
+```ts
+import { P3XHttpCacheInterceptorModule, CachingHeaders, CachingStore  } from 'p3x-angular-http-cache-interceptor';
+
+P3XHttpCacheInterceptorModule.forRoot({
+    // default request is no cache
+    behavior: CachingHeaders.NoCache,
+    
+    // if a request has CachingHeaders.Cache header it will cache globally
+    store: CachingStore.Global,
+})
+
+P3XHttpCacheInterceptorModule.forRoot({
+    // default request is cache
+    behavior: CachingHeaders.Cache,
+
+    // in this config, it will cache not globally, but per module
+    store: CachingStore.PerModule,
+})
 ```
 
 ## Example invocation in a component
@@ -173,7 +194,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-ANGULAR-HTTP-CACHE-INTERCEPTOR**](https://corifeus.com/angular-http-cache-interceptor) Build v2020.4.300
+[**P3X-ANGULAR-HTTP-CACHE-INTERCEPTOR**](https://corifeus.com/angular-http-cache-interceptor) Build v2020.4.303
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

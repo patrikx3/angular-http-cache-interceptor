@@ -1,35 +1,34 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {AppComponent} from './app.component';
 
-import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
-import { P3XHttpCacheInterceptorModule  } from '../../projects/angular-http-cache-interceptor/src/lib/http-cache-interceptor.module';
-//import { P3XHttpCacheInterceptorModule  } from 'p3x-interceptor'
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatTabsModule} from "@angular/material/tabs";
 
-//import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
-import { MatSnackBarModule} from "@angular/material/snack-bar";
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatDividerModule} from "@angular/material/divider";
+import { AppRoutingModule } from "./app-routing.module";
+import {MatCardModule} from "@angular/material/card";
+
+import hljs from 'highlight.js/lib/core';
+import typescript from 'highlight.js/lib/languages/typescript';
+hljs.registerLanguage('typescript', typescript);
+
+window['hljs'] = hljs
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
-    P3XHttpCacheInterceptorModule,
+
     BrowserAnimationsModule,
     //MatProgressSpinnerModule,
-    MatSnackBarModule,
     MatToolbarModule,
-    MatButtonModule,
+    MatTabsModule,
     MatCardModule,
-    MatDividerModule,
-    HttpClientModule,
   ],
   providers: [
   ],

@@ -1,0 +1,43 @@
+
+    <div class="list-item-fix">
+      <button mat-flat-button color="primary" (click)="loadDefault()">Default request</button>
+      <br/>
+      <br/>
+      <div class="mat-caption">Itt will try to load some random data, based on the default interceptor behavior without using headers.</div>
+    </div>
+    <br/>
+    <mat-divider></mat-divider>
+    <br/>
+    <div class="list-item-fix">
+      <button mat-flat-button color="primary" (click)="loadCached()">Forced cached request</button>
+      <br/>
+      <br/>
+      <div class="mat-caption">Itt will try to load some random data with cached data. You can see in the browser inspector network tab, that there will be only one request. Here, we use the <code>CachingHeaders.Cache</code> header.</div>
+    </div>
+    <br/>
+    <mat-divider></mat-divider>
+    <br/>
+    <div class="list-item-fix">
+      <button mat-flat-button color="primary"  (click)="loadNonCached()">Forced non-cached request</button>
+      <br/>
+      <br/>
+      <div class="mat-caption">It will try to load some random data without cache. You can see in the browser inspector network tab, that every click will talk to a server and retrieve the new data.  Here, we use the <code>CachingHeaders.NoCache</code> header.</div>
+    </div>
+    <br/>
+    <mat-divider></mat-divider>
+    <br/>
+    <div>
+      <a mat-button color="accent" class="mat-button-wrapping" href="https://corifeus.com/angular-http-cache-interceptor" target="_blank">Corifeus P3X Angular HTTP Cache Interceptor</a>
+    </div>
+    <br/>
+    <mat-divider></mat-divider>
+    <br/>
+    <div>
+      <a mat-button color="accent" href="https://github.com/patrikx3/angular-http-cache-interceptor" target="_blank">GitHub</a>
+    </div>
+    <br/>
+    <mat-divider></mat-divider>
+    <br/>
+    <div>
+      <a mat-button color="accent" href="https://www.npmjs.com/package/p3x-angular-http-cache-interceptor" target="_blank">NpmJS</a>
+    </div>
