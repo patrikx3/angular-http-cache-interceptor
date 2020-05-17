@@ -1,7 +1,7 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 
 import { HttpClient } from "@angular/common/http";
-import {MatSnackBar} from "@angular/material/snack-bar";
+import {MatSnackBar, MatSnackBarConfig} from "@angular/material/snack-bar";
 
 import { CachingHeaders} from "../../../../projects/angular-http-cache-interceptor/src/lib/caching-headers.enum";
 
@@ -12,9 +12,14 @@ import { CachingHeaders} from "../../../../projects/angular-http-cache-intercept
   styleUrls: ['./default-component.component.scss'],
 
   //FIXME why do we have to use ViewEncapsulation.None?
-  encapsulation: ViewEncapsulation.None
+  //encapsulation: ViewEncapsulation.None
 })
 export class DefaultComponentComponent  {
+
+  defaultSnackbarSettings : MatSnackBarConfig = {
+    horizontalPosition: "center",
+    verticalPosition: "bottom"
+  }
 
   constructor(
     private http: HttpClient,
@@ -25,9 +30,9 @@ export class DefaultComponentComponent  {
   async loadDefault() {
     try {
       const response : any = await this.http.get('https://server.patrikx3.com/api/core/util/random/32').toPromise()
-      this.snack.open(`The output is based on the default intercaptor behavior: ${response.random}`, 'OK')
+      this.snack.open(`The output is based on the default intercaptor behavior: ${response.random}`, 'OK', this.defaultSnackbarSettings)
     } catch(e) {
-      this.snack.open(`Sorry, error happened, check the console for the error`, 'OK')
+      this.snack.open(`Sorry, error happened, check the console for the error`, 'OK', this.defaultSnackbarSettings)
       console.error(e)
     }
 
@@ -40,9 +45,9 @@ export class DefaultComponentComponent  {
           [CachingHeaders.Cache]: '1',
         }
       }).toPromise()
-      this.snack.open(`Will be always the same output: ${response.random}`, 'OK')
+      this.snack.open(`Will be always the same output: ${response.random}`, 'OK', this.defaultSnackbarSettings)
     } catch(e) {
-      this.snack.open(`Sorry, error happened, check the console for the error`, 'OK')
+      this.snack.open(`Sorry, error happened, check the console for the error`, 'OK', this.defaultSnackbarSettings)
       console.error(e)
     }
   }
@@ -54,9 +59,9 @@ export class DefaultComponentComponent  {
           [CachingHeaders.NoCache]: '1',
         }
       }).toPromise()
-      this.snack.open(`Truly random data: ${response.random}`, 'OK')
+      this.snack.open(`Truly random data: ${response.random}`, 'OK', this.defaultSnackbarSettings)
     } catch(e) {
-      this.snack.open(`Sorry, error happened, check the console for the error`, 'OK')
+      this.snack.open(`Sorry, error happened, check the console for the error`, 'OK', this.defaultSnackbarSettings)
       console.error(e)
     }
   }

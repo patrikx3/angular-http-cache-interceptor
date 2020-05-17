@@ -13,7 +13,8 @@ export class BootstrapComponent implements OnInit {
 
   ngOnInit(): void {
     this.defaultSettings = window['hljs'].highlight('typescript',
-      `import { P3XHttpCacheInterceptorModule  } from 'p3x-angular-http-cache-interceptor';
+      `import { P3XHttpCacheInterceptorModule }
+from 'p3x-angular-http-cache-interceptor';
 
 @NgModule({
   declarations: [],
