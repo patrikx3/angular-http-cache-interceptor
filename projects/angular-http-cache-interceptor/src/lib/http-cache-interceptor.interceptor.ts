@@ -52,7 +52,8 @@ export class HttpCacheInterceptorInterceptor implements HttpInterceptor {
   }
 
   httpToKey(httpRequest: HttpRequest<any>) {
-    const key = httpRequest.method + '@' + httpRequest.urlWithParams + '@' + hash(httpRequest.params, hashOptions) + '@' + hash(httpRequest.body, hashOptions)
+    const body = JSON.parse(JSON.stringify(httpRequest.body))
+    const key = httpRequest.method + '@' + httpRequest.urlWithParams + '@' + hash(httpRequest.params, hashOptions) + '@' + hash(body, hashOptions)
     return key
   }
 
