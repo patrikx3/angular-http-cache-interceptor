@@ -20,7 +20,7 @@ import { HttpCacheConfig } from "./http-cache-config";
 })
 export class P3XHttpCacheInterceptorModule {
 
-  static forRoot(httpCacheConfig: HttpCacheConfig): ModuleWithProviders {
+  static forRoot(httpCacheConfig: HttpCacheConfig): ModuleWithProviders<P3XHttpCacheInterceptorModule> {
     return {
       ngModule: P3XHttpCacheInterceptorModule,
       providers: [
