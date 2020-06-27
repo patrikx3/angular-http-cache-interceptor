@@ -55,7 +55,9 @@ module.exports = (grunt) => {
     }
   });
 
-  const defaultTask = builder.config.task.build.js.concat(['hook-lib'])
+
+
+  const defaultTask = ['cory-raw-npm-angular'].concat(builder.config.task.build.js.concat(['hook-lib']))
   grunt.registerTask('default', defaultTask );
 
 
