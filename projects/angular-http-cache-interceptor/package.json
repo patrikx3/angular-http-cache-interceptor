@@ -2,14 +2,14 @@
     "name": "p3x-angular-http-cache-interceptor",
     "peerDependencies": {
         "object-hash": "^2.0.3",
-        "@angular/common": "^10.0.9",
-        "@angular/core": "^10.0.9"
+        "@angular/common": "^10.1.0",
+        "@angular/core": "^10.1.0"
     },
     "corifeus": {
         "install": false
     },
     "devDependencies": {
-        "corifeus-builder": "^2020.10.100"
+        "corifeus-builder": "^2020.10.109"
     },
     "dependencies": {
         "tslib": "^2.0.1"
