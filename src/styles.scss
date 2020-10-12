@@ -15,7 +15,7 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$workspace-primary: mat-palette($mat-brown);
+$workspace-primary: mat-palette($mat-green);
 $workspace-accent: mat-palette($mat-purple, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
@@ -33,25 +33,25 @@ $workspace-theme: mat-light-theme($workspace-primary, $workspace-accent, $worksp
 @include mat-divider-theme($workspace-theme);
 //@include mat-progress-spinner-theme($workspace-theme);
 @include mat-toolbar-theme(mat-light-theme(
-    mat-palette($mat-brown),
+    mat-palette($mat-blue-gray, 600),
     mat-palette($mat-deep-orange),
     mat-palette($mat-green)
 ));
 @include mat-snack-bar-theme(mat-light-theme(
-    mat-palette($mat-brown, 400),
-    mat-palette($mat-brown, 300),
+    mat-palette($mat-blue-grey),
+    mat-palette($mat-blue-grey),
     mat-palette($mat-green)
 ));
 @include mat-button-theme( mat-light-theme(
-    mat-palette($mat-green, 600),
-    mat-palette($mat-deep-orange),
+    mat-palette($mat-blue, 800),
+    mat-palette($mat-orange, 900),
     mat-palette($mat-green)
 ));
 @include mat-card-theme($workspace-theme);
 
 @include mat-tabs-theme(mat-light-theme(
-    mat-palette($mat-gray, 800),
-    mat-palette($mat-orange),
+    mat-palette($mat-grey, 900),
+    mat-palette($mat-blue-grey, 500),
     mat-palette($mat-green)
 ));
 
