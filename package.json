@@ -1,6 +1,6 @@
 {
     "name": "p3x-angular-http-cache-interceptor",
-    "version": "2020.10.114",
+    "version": "2020.10.118",
     "corifeus": {
         "icon": "fas fa-fire",
         "prefix": "p3x-",
@@ -24,7 +24,7 @@
         "test2": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
-        "build-lib": "ng build --prod --project angular-http-cache-interceptor && cp README.md ./dist/angular-http-cache-interceptor && cp LICENSE ./dist/angular-http-cache-interceptor && ./scripts/post-lib-build.js",
+        "build-lib": "ng build --prod --project angular-http-cache-interceptor && cp README.md ./dist/angular-http-cache-interceptor && cp LICENSE ./dist/angular-http-cache-interceptor && node node_modules/corifeus-builder/src/utils/angular/post-lib-build.js",
         "build-app": "ng build --prod --source-map=false --extract-css=true --output-hashing=all --configuration=production --deploy-url=/ --base-href=/ --aot=true --build-optimizer=true --optimization=true"
     },
     "repository": {
@@ -83,7 +83,7 @@
         "@types/jasmine": "~3.5.14",
         "@types/jasminewd2": "~2.0.8",
         "codelyzer": "^6.0.1",
-        "corifeus-builder": "^2020.10.118",
+        "corifeus-builder": "^2020.10.125",
         "jasmine-core": "~3.6.0",
         "jasmine-spec-reporter": "~6.0.0",
         "karma": "~5.2.3",

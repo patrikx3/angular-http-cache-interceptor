@@ -35,29 +35,9 @@ module.exports = (grunt) => {
 
   });
 
-  grunt.registerTask('hook-lib', async function () {
-    const done = this.async();
-
-    try {
-      const rootPkgName = require('./package.json')
-      const pkgName = path.resolve(`./projects/angular-http-cache-interceptor/package.json`)
-
-      let pkg = require(pkgName)
-      pkg.name = rootPkgName.name
-      pkg.corifeus = {
-        install: false
-      }
-      const data = JSON.stringify(pkg, null, 4)
-      await fs.writeFile(pkgName, data)
-      done()
-    } catch (e) {
-      done(e)
-    }
-  });
 
 
-
-  const defaultTask = ['cory-raw-npm-angular'].concat(builder.config.task.build.js.concat(['hook-lib']))
+  const defaultTask = ['cory-raw-npm-angular'].concat(builder.config.task.build.js.concat(['cory-angular-hook-lib']))
   grunt.registerTask('default', defaultTask );
 
 
