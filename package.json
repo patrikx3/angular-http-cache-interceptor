@@ -1,6 +1,6 @@
 {
     "name": "p3x-angular-http-cache-interceptor",
-    "version": "2020.10.118",
+    "version": "2020.10.119",
     "corifeus": {
         "icon": "fas fa-fire",
         "prefix": "p3x-",
