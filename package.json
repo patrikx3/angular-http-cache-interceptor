@@ -1,6 +1,6 @@
 {
     "name": "p3x-angular-http-cache-interceptor",
-    "version": "2020.10.119",
+    "version": "2020.10.124",
     "corifeus": {
         "icon": "fas fa-fire",
         "prefix": "p3x-",
@@ -13,7 +13,7 @@
         "build": true,
         "cdn": true,
         "publish-location": "./dist/angular-http-cache-interceptor",
-        "angular": "10.1.5"
+        "angular": "10.1.6"
     },
     "description": "🔥 Cache every request in Angular, not only the GET, but all methods of this interceptor, and allows you to interact with the interceptor via specific headers and modify the request, and these specific headers will be not included in the final request.",
     "scripts": {
@@ -51,16 +51,16 @@
     },
     "homepage": "https://corifeus.com/angular-http-cache-interceptor",
     "dependencies": {
-        "@angular/animations": "~10.1.5",
-        "@angular/cdk": "^10.2.4",
-        "@angular/common": "~10.1.5",
-        "@angular/compiler": "~10.1.5",
-        "@angular/core": "~10.1.5",
-        "@angular/forms": "~10.1.5",
-        "@angular/material": "^10.2.4",
-        "@angular/platform-browser": "~10.1.5",
-        "@angular/platform-browser-dynamic": "~10.1.5",
-        "@angular/router": "~10.1.5",
+        "@angular/animations": "~10.1.6",
+        "@angular/cdk": "^10.2.5",
+        "@angular/common": "~10.1.6",
+        "@angular/compiler": "~10.1.6",
+        "@angular/core": "~10.1.6",
+        "@angular/forms": "~10.1.6",
+        "@angular/material": "^10.2.5",
+        "@angular/platform-browser": "~10.1.6",
+        "@angular/platform-browser-dynamic": "~10.1.6",
+        "@angular/router": "~10.1.6",
         "@types/node": "^14.11.8",
         "hash": "^0.2.1",
         "highlight.js": "^10.2.1",
@@ -68,22 +68,22 @@
         "object-hash": "^2.0.3",
         "rxjs": "~6.6.3",
         "tslib": "^2.0.3",
-        "zone.js": "~0.11.1"
+        "zone.js": "~0.10.3"
     },
     "dependencies-save": {
         "p3x-interceptor": "npm:p3x-angular-http-cache-interceptor@^2020.4.304"
     },
     "devDependencies": {
-        "@angular-devkit/build-angular": "~0.1001.6",
-        "@angular-devkit/build-ng-packagr": "~0.1001.6",
-        "@angular/cli": "~10.1.6",
-        "@angular/compiler-cli": "~10.1.5",
-        "@angular/language-service": "~10.1.5",
+        "@angular-devkit/build-angular": "~0.1001.7",
+        "@angular-devkit/build-ng-packagr": "~0.1001.7",
+        "@angular/cli": "~10.1.7",
+        "@angular/compiler-cli": "~10.1.6",
+        "@angular/language-service": "~10.1.6",
         "@types/highlight.js": "^9.12.4",
         "@types/jasmine": "~3.5.14",
         "@types/jasminewd2": "~2.0.8",
         "codelyzer": "^6.0.1",
-        "corifeus-builder": "^2020.10.125",
+        "corifeus-builder": "^2020.10.129",
         "jasmine-core": "~3.6.0",
         "jasmine-spec-reporter": "~6.0.0",
         "karma": "~5.2.3",
