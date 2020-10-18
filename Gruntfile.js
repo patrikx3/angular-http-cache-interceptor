@@ -35,10 +35,29 @@ module.exports = (grunt) => {
 
   });
 
+  grunt.registerTask('build', async function () {
+    const done = this.async();
 
+    try {
+      await builder.utils.spawn({
+        grunt: grunt,
+        gruntThis: this,
+      }, {
+        cmd: 'npm',
+        args: [
+          'run',
+          'build-app',
+        ]
+      });
+      done()
+    } catch (e) {
+      done(e)
+    }
 
-  const defaultTask = ['cory-raw-npm-angular'].concat(builder.config.task.build.js.concat(['cory-angular-hook-lib']))
-  grunt.registerTask('default', defaultTask );
+  });
+
+  const defaultTask = builder.config.task.build.js.concat(['cory-angular-hook-lib', 'cory-raw-npm-angular', 'build'])
+  grunt.registerTask('default', defaultTask);
 
 
 }

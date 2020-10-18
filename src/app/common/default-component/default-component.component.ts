@@ -30,7 +30,7 @@ export class DefaultComponentComponent  {
   async loadDefault() {
     try {
       const response : any = await this.http.get('https://server.patrikx3.com/api/core/util/random/32').toPromise()
-      this.snack.open(`The output is based on the default intercaptor behavior: ${response.random}`, 'OK', this.defaultSnackbarSettings)
+      this.snack.open(`The output is based on the default interceptor behavior: ${response.random}`, 'OK', this.defaultSnackbarSettings)
     } catch(e) {
       this.snack.open(`Sorry, error happened, check the console for the error`, 'OK', this.defaultSnackbarSettings)
       console.error(e)

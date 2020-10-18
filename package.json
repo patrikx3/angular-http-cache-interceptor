@@ -1,6 +1,6 @@
 {
     "name": "p3x-angular-http-cache-interceptor",
-    "version": "2020.10.124",
+    "version": "2020.10.132",
     "corifeus": {
         "icon": "fas fa-fire",
         "prefix": "p3x-",
@@ -61,9 +61,9 @@
         "@angular/platform-browser": "~10.1.6",
         "@angular/platform-browser-dynamic": "~10.1.6",
         "@angular/router": "~10.1.6",
-        "@types/node": "^14.11.8",
+        "@types/node": "^14.11.10",
         "hash": "^0.2.1",
-        "highlight.js": "^10.2.1",
+        "highlight.js": "^10.3.1",
         "object": "^0.1.1",
         "object-hash": "^2.0.3",
         "rxjs": "~6.6.3",
@@ -83,7 +83,7 @@
         "@types/jasmine": "~3.5.14",
         "@types/jasminewd2": "~2.0.8",
         "codelyzer": "^6.0.1",
-        "corifeus-builder": "^2020.10.129",
+        "corifeus-builder": "^2020.10.134",
         "jasmine-core": "~3.6.0",
         "jasmine-spec-reporter": "~6.0.0",
         "karma": "~5.2.3",
