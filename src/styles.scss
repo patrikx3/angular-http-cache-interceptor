@@ -50,8 +50,8 @@ $workspace-theme: mat-light-theme($workspace-primary, $workspace-accent, $worksp
 @include mat-card-theme($workspace-theme);
 
 @include mat-tabs-theme(mat-light-theme(
-    mat-palette($mat-grey, 900),
-    mat-palette($mat-blue-grey, 500),
+    mat-palette($mat-blue-grey, 100),
+    mat-palette($mat-blue-grey, 900),
     mat-palette($mat-green)
 ));
 
