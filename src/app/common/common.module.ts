@@ -6,7 +6,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatDividerModule} from "@angular/material/divider";
 import {HttpClientModule} from "@angular/common/http";
 
-
+import { HighlightService } from "./highlight.service";
 
 @NgModule({
   declarations: [DefaultComponentComponent],
@@ -16,6 +16,9 @@ import {HttpClientModule} from "@angular/common/http";
     MatButtonModule,
     MatDividerModule,
     HttpClientModule,
+  ],
+  providers: [
+    HighlightService
   ],
   exports: [
     DefaultComponentComponent,

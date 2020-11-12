@@ -12,3 +12,12 @@
   white-space: normal !important;
   text-align: left;
 }
+.link-fix {
+  $pos: 15px;
+  position: relative;
+  left: -15px;
+  width: calc(100% + 30px);
+  padding-top: $pos;
+  padding-bottom: $pos;
+  text-align: left;
+}

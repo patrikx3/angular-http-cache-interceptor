@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HighlightService} from "../../common/highlight.service";
 
 
 
@@ -11,13 +12,13 @@ export class BootstrapComponent implements OnInit {
 
   defaultSettings: string
 
-  constructor() { }
+  constructor(private service: HighlightService) { }
 
   ngOnInit(): void {
-    this.defaultSettings = window['hljs'].highlight('typescript',
-      `import { P3XHttpCacheInterceptorModule,
-CachingHeaders, CachingStore }
-from 'p3x-angular-http-cache-interceptor';
+
+      this.defaultSettings = this.service.hljs.highlight('typescript',
+
+`import { P3XHttpCacheInterceptorModule, CachingHeaders, CachingStore } from 'p3x-angular-http-cache-interceptor';
 
 @NgModule({
   declarations: [],
