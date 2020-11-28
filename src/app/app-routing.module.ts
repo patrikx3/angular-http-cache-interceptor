@@ -16,16 +16,22 @@ const routes: Routes = [
     loadChildren: () => import('./non-cache/non-cache.module').then(m => m.NonCacheModule)
   },
   {
+    path: '',
+    redirectTo: `/default`,
+    pathMatch: 'full'
+  },
+  {
     path: '**',
-    redirectTo: '/default'
+    loadChildren: () => import('./not-found/not-found.module').then(m => m.NotFoundModule)
   }
 ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    preloadingStrategy: PreloadAllModules,
-    relativeLinkResolution: 'legacy'
-})],
+  imports: [
+    RouterModule.forRoot(routes, {
+      preloadingStrategy: PreloadAllModules,
+    })
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
