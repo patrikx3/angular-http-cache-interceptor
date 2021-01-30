@@ -1,11 +1,11 @@
 
-@license p3x-angular-http-cache-interceptor v2020.10.147
+@license p3x-angular-http-cache-interceptor v2021.4.103
   
 🔥 Cache every request in Angular, not only the GET, but all methods of this interceptor, and allows you to interact with the interceptor via specific headers and modify the request, and these specific headers will be not included in the final request.
 
 https://corifeus.com/angular-http-cache-interceptor
 
-Copyright (c) 2020 Patrik Laszlo / P3X / Corifeus and contributors.
+Copyright (c) 2021 Patrik Laszlo / P3X / Corifeus and contributors.
 
 MIT License
 
