@@ -1,6 +1,6 @@
 {
     "name": "p3x-angular-http-cache-interceptor",
-    "version": "2021.4.105",
+    "version": "2021.4.108",
     "corifeus": {
         "icon": "fas fa-fire",
         "prefix": "p3x-",
@@ -13,7 +13,7 @@
         "build": true,
         "cdn": true,
         "publish-location": "./dist/angular-http-cache-interceptor",
-        "angular": "11.1.1"
+        "angular": "11.2.0"
     },
     "description": "🔥 Cache every request in Angular, not only the GET, but all methods of this interceptor, and allows you to interact with the interceptor via specific headers and modify the request, and these specific headers will be not included in the final request.",
     "scripts": {
@@ -83,7 +83,7 @@
         "@types/jasmine": "~3.6.3",
         "@types/jasminewd2": "~2.0.8",
         "codelyzer": "^6.0.1",
-        "corifeus-builder": "^2021.4.115",
+        "corifeus-builder": "^2021.4.118",
         "jasmine-core": "~3.6.0",
         "jasmine-spec-reporter": "~6.0.0",
         "karma": "~5.2.3",
