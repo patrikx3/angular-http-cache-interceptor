@@ -1,6 +1,6 @@
 {
     "name": "p3x-angular-http-cache-interceptor",
-    "version": "2021.4.108",
+    "version": "2021.4.111",
     "corifeus": {
         "icon": "fas fa-fire",
         "prefix": "p3x-",
@@ -13,7 +13,7 @@
         "build": true,
         "cdn": true,
         "publish-location": "./dist/angular-http-cache-interceptor",
-        "angular": "11.2.0"
+        "angular": "11.2.1"
     },
     "description": "🔥 Cache every request in Angular, not only the GET, but all methods of this interceptor, and allows you to interact with the interceptor via specific headers and modify the request, and these specific headers will be not included in the final request.",
     "scripts": {
@@ -52,17 +52,17 @@
     },
     "homepage": "https://corifeus.com/angular-http-cache-interceptor",
     "dependencies": {
-        "@angular/animations": "~11.2.0",
-        "@angular/cdk": "^11.2.0",
-        "@angular/common": "~11.2.0",
-        "@angular/compiler": "~11.2.0",
-        "@angular/core": "~11.2.0",
-        "@angular/forms": "~11.2.0",
-        "@angular/material": "^11.2.0",
-        "@angular/platform-browser": "~11.2.0",
-        "@angular/platform-browser-dynamic": "~11.2.0",
-        "@angular/router": "~11.2.0",
-        "@types/node": "^14.14.27",
+        "@angular/animations": "~11.2.1",
+        "@angular/cdk": "^11.2.1",
+        "@angular/common": "~11.2.1",
+        "@angular/compiler": "~11.2.1",
+        "@angular/core": "~11.2.1",
+        "@angular/forms": "~11.2.1",
+        "@angular/material": "^11.2.1",
+        "@angular/platform-browser": "~11.2.1",
+        "@angular/platform-browser-dynamic": "~11.2.1",
+        "@angular/router": "~11.2.1",
+        "@types/node": "^14.14.31",
         "hash": "^0.2.1",
         "highlight.js": "^10.6.0",
         "object": "^0.1.1",
@@ -75,15 +75,15 @@
         "p3x-interceptor": "npm:p3x-angular-http-cache-interceptor@^2020.4.304"
     },
     "devDependencies": {
-        "@angular-devkit/build-angular": "~0.1102.0",
-        "@angular/cli": "~11.2.0",
-        "@angular/compiler-cli": "~11.2.0",
-        "@angular/language-service": "~11.2.0",
+        "@angular-devkit/build-angular": "~0.1102.1",
+        "@angular/cli": "~11.2.1",
+        "@angular/compiler-cli": "~11.2.1",
+        "@angular/language-service": "~11.2.1",
         "@types/highlight.js": "^9.12.4",
-        "@types/jasmine": "~3.6.3",
+        "@types/jasmine": "~3.6.4",
         "@types/jasminewd2": "~2.0.8",
         "codelyzer": "^6.0.1",
-        "corifeus-builder": "^2021.4.118",
+        "corifeus-builder": "^2021.4.121",
         "jasmine-core": "~3.6.0",
         "jasmine-spec-reporter": "~6.0.0",
         "karma": "~5.2.3",
@@ -98,15 +98,15 @@
         "webpack-bundle-analyzer": "^4.4.0",
         "eslint": "^7.20.0",
         "eslint-plugin-import": "2.22.1",
-        "eslint-plugin-jsdoc": "31.6.1",
+        "eslint-plugin-jsdoc": "32.1.0",
         "eslint-plugin-prefer-arrow": "1.2.3",
         "@angular-eslint/builder": "1.2.0",
         "@angular-eslint/eslint-plugin": "1.2.0",
         "@angular-eslint/eslint-plugin-template": "1.2.0",
         "@angular-eslint/schematics": "1.2.0",
         "@angular-eslint/template-parser": "1.2.0",
-        "@typescript-eslint/eslint-plugin": "4.15.0",
-        "@typescript-eslint/parser": "4.15.0"
+        "@typescript-eslint/eslint-plugin": "4.15.1",
+        "@typescript-eslint/parser": "4.15.1"
     },
     "engines": {
         "node": ">=12.13.0"
