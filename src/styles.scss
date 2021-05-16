@@ -1,58 +1,56 @@
-
-
+@use '~@angular/material' as mat;
 @import '~highlight.js/scss/idea';
 
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@import '~@angular/material/theming';
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
-@include mat-core();
+@include mat.core();
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$workspace-primary: mat-palette($mat-green);
-$workspace-accent: mat-palette($mat-purple, A200, A100, A400);
+$workspace-primary: mat.define-palette(mat.$green-palette);
+$workspace-accent: mat.define-palette(mat.$purple-palette, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$workspace-warn: mat-palette($mat-red);
+$workspace-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$workspace-theme: mat-light-theme($workspace-primary, $workspace-accent, $workspace-warn);
+$workspace-theme: mat.define-light-theme($workspace-primary, $workspace-accent, $workspace-warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-//@include angular-material-theme($workspace-theme);
+//@include mat.all-component-themes($workspace-theme);
 
-@include mat-core-theme($workspace-theme);
-@include mat-divider-theme($workspace-theme);
-//@include mat-progress-spinner-theme($workspace-theme);
-@include mat-toolbar-theme(mat-light-theme(
-    mat-palette($mat-blue-gray, 600),
-    mat-palette($mat-deep-orange),
-    mat-palette($mat-green)
+@include mat.core-theme($workspace-theme);
+@include mat.divider-theme($workspace-theme);
+//@include mat.progress-spinner-theme($workspace-theme);
+@include mat.toolbar-theme(mat.define-light-theme(
+    mat.define-palette(mat.$blue-gray-palette, 600),
+    mat.define-palette(mat.$deep-orange-palette),
+    mat.define-palette(mat.$green-palette)
 ));
-@include mat-snack-bar-theme(mat-light-theme(
-    mat-palette($mat-blue-grey),
-    mat-palette($mat-blue-grey),
-    mat-palette($mat-green)
+@include mat.snack-bar-theme(mat.define-light-theme(
+    mat.define-palette(mat.$blue-grey-palette),
+    mat.define-palette(mat.$blue-grey-palette),
+    mat.define-palette(mat.$green-palette)
 ));
-@include mat-button-theme( mat-light-theme(
-    mat-palette($mat-blue, 800),
-    mat-palette($mat-orange, 900),
-    mat-palette($mat-green)
+@include mat.button-theme( mat.define-light-theme(
+    mat.define-palette(mat.$blue-palette, 800),
+    mat.define-palette(mat.$orange-palette, 900),
+    mat.define-palette(mat.$green-palette)
 ));
-@include mat-card-theme($workspace-theme);
+@include mat.card-theme($workspace-theme);
 
-@include mat-tabs-theme(mat-light-theme(
-    mat-palette($mat-blue-grey, 100),
-    mat-palette($mat-blue-grey, 900),
-    mat-palette($mat-green)
+@include mat.tabs-theme(mat.define-light-theme(
+    mat.define-palette(mat.$blue-grey-palette, 100),
+    mat.define-palette(mat.$blue-grey-palette, 900),
+    mat.define-palette(mat.$green-palette)
 ));
 
 
@@ -61,7 +59,7 @@ $workspace-theme: mat-light-theme($workspace-primary, $workspace-accent, $worksp
 html, body { height: 100%; }
 body {
   margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: mat-color($mat-gray, 200);
+  background-color: mat.get-color-from-palette(mat.$gray-palette, 200);
 }
 
 .p3x-ng-http-pre {

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
 
-import {version} from '../../package.json';
+import packageInfo from '../../package.json';
 import {Router} from "@angular/router";
 
 @Component({
@@ -11,7 +11,7 @@ import {Router} from "@angular/router";
 })
 export class AppComponent implements OnInit {
 
-  public version: string = version;
+  public version: string = packageInfo.version;
 
   navLinks: any[];
   activeLinkIndex = -1;
