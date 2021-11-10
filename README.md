@@ -14,6 +14,8 @@
 # 🔥 Cache every request in Angular, not only the GET, but all methods of this interceptor, and allows you to interact with the interceptor via specific headers and modify the request, and these specific headers will be not included in the final request v2021.10.149
 
 
+# Warning
+2021. November 17. - All patrikx3.com, corifeus.com and sub-domains are offline. There is electricity upgrade. Will come back again on 2021. November 18.
 
 **Bugs are evident™ - MATRIX️**
     
