@@ -12,7 +12,7 @@
     "module": "es2020",
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2015",
+    "target": "ES2022",
     "lib": [
       "es2018",
       "dom"
@@ -22,7 +22,8 @@
         "dist/angular-http-cache-interceptor/angular-http-cache-interceptor",
         "dist/angular-http-cache-interceptor"
       ]
-    }
+    },
+    "useDefineForClassFields": false
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

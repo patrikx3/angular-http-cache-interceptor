@@ -5,7 +5,7 @@
 
 <div style="margin: 25px;">
 
-  <nav mat-tab-nav-bar mat-stretch-tabs backgroundColor="primary" color="accent">
+  <nav mat-tab-nav-bar [tabPanel]="tabPanel"  backgroundColor="primary" color="accent">
     <a mat-tab-link
        *ngFor="let link of navLinks"
        [routerLink]="link.link"
@@ -15,20 +15,25 @@
     </a>
   </nav>
 
-  <mat-card style=" border-top-left-radius: 0px; border-top-right-radius: 0px; padding-top: 0;">
-    <div>
-      <a class="link-fix" mat-button color="accent" href="https://corifeus.com/angular-http-cache-interceptor" target="_blank">Corifeus P3X Angular HTTP Cache Interceptor</a>
-    </div>
-    <mat-divider></mat-divider>
-    <div>
-      <a class="link-fix" mat-button color="accent" href="https://github.com/patrikx3/angular-http-cache-interceptor" target="_blank">GitHub</a>
-    </div>
-    <mat-divider></mat-divider>
-    <div>
-      <a class="link-fix" mat-button color="accent" href="https://www.npmjs.com/package/p3x-angular-http-cache-interceptor" target="_blank">NpmJS</a>
-    </div>
-    <mat-divider></mat-divider>
-    <br/>
-    <router-outlet></router-outlet>
-  </mat-card>
+  <mat-tab-nav-panel #tabPanel>
+    <mat-card style=" border-top-left-radius: 0px; border-top-right-radius: 0px; padding-top: 0;">
+      <div>
+        <a class="link-fix" mat-button color="accent" href="https://corifeus.com/angular-http-cache-interceptor" target="_blank">Corifeus P3X Angular HTTP Cache Interceptor</a>
+      </div>
+      <mat-divider></mat-divider>
+      <div>
+        <a class="link-fix" mat-button color="accent" href="https://github.com/patrikx3/angular-http-cache-interceptor" target="_blank">GitHub</a>
+      </div>
+      <mat-divider></mat-divider>
+      <div>
+        <a class="link-fix" mat-button color="accent" href="https://www.npmjs.com/package/p3x-angular-http-cache-interceptor" target="_blank">NpmJS</a>
+      </div>
+      <mat-divider></mat-divider>
+      <br/>
+      <div style="margin: 10px;">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-card>
+  
+  </mat-tab-nav-panel>
 </div>

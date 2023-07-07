@@ -8,16 +8,13 @@
   text-overflow: ellipsis;
 }
 
-.mat-button-wrapping.mat-button {
+.mat-mdc-button-wrapping.mat-button {
   white-space: normal !important;
   text-align: left;
 }
 .link-fix {
-  $pos: 15px;
-  position: relative;
-  left: -15px;
-  width: calc(100% + 30px);
-  padding-top: $pos;
-  padding-bottom: $pos;
+  display: block;
+  $pos: 5px;
+  padding: $pos;
   text-align: left;
 }
