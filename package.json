@@ -1,6 +1,6 @@
 {
     "name": "p3x-angular-http-cache-interceptor",
-    "version": "2023.10.107",
+    "version": "2023.10.110",
     "corifeus": {
         "icon": "fas fa-fire",
         "prefix": "p3x-",
@@ -86,7 +86,7 @@
         "@typescript-eslint/eslint-plugin": "5.61.0",
         "@typescript-eslint/parser": "5.61.0",
         "codelyzer": "^6.0.2",
-        "corifeus-builder": "^2023.10.111",
+        "corifeus-builder": "^2023.10.113",
         "eslint": "^8.44.0",
         "eslint-plugin-import": "2.27.5",
         "eslint-plugin-jsdoc": "46.4.3",
