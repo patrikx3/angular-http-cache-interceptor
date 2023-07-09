@@ -9,19 +9,19 @@ import {HttpClientModule} from "@angular/common/http";
 import { HighlightService } from "./highlight.service";
 
 @NgModule({
-  declarations: [DefaultComponentComponent],
-  imports: [
-    AngularCommonModule,
-    MatSnackBarModule,
-    MatButtonModule,
-    MatDividerModule,
-    HttpClientModule,
-  ],
-  providers: [
-    HighlightService
-  ],
-  exports: [
-    DefaultComponentComponent,
-  ]
+    imports: [
+        AngularCommonModule,
+        MatSnackBarModule,
+        MatButtonModule,
+        MatDividerModule,
+        HttpClientModule,
+        DefaultComponentComponent,
+    ],
+    providers: [
+        HighlightService
+    ],
+    exports: [
+        DefaultComponentComponent,
+    ]
 })
 export class CommonModule { }

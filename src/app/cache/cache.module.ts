@@ -11,18 +11,16 @@ import {CachingStore} from "../../../projects/angular-http-cache-interceptor/src
 import { MatDividerModule } from "@angular/material/divider";
 
 @NgModule({
-  declarations: [
-    BootstrapComponent,
-  ],
-  imports: [
-    P3XHttpCacheInterceptorModule.forRoot({
-      behavior: CachingHeaders.Cache,
-      store: CachingStore.Global,
-    }),
-    AngularCommonModule,
-    CacheRoutingModule,
-    CommonModule,
-    MatDividerModule,
-  ],
+    imports: [
+        P3XHttpCacheInterceptorModule.forRoot({
+            behavior: CachingHeaders.Cache,
+            store: CachingStore.Global,
+        }),
+        AngularCommonModule,
+        CacheRoutingModule,
+        CommonModule,
+        MatDividerModule,
+        BootstrapComponent,
+    ],
 })
 export class CacheModule { }

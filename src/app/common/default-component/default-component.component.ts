@@ -4,15 +4,16 @@ import { HttpClient } from "@angular/common/http";
 import {MatSnackBar, MatSnackBarConfig} from "@angular/material/snack-bar";
 
 import { CachingHeaders} from "../../../../projects/angular-http-cache-interceptor/src/lib/caching-headers.enum";
+import { MatDividerModule } from '@angular/material/divider';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @Component({
-  selector: 'p3x-default-component',
-  templateUrl: './default-component.component.html',
-  styleUrls: ['./default-component.component.scss'],
-
-  //FIXME why do we have to use ViewEncapsulation.None?
-  //encapsulation: ViewEncapsulation.None
+    selector: 'p3x-default-component',
+    templateUrl: './default-component.component.html',
+    styleUrls: ['./default-component.component.scss'],
+    standalone: true,
+    imports: [MatButtonModule, MatDividerModule],
 })
 export class DefaultComponentComponent  {
 

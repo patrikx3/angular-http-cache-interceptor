@@ -12,18 +12,16 @@ import { MatDividerModule } from "@angular/material/divider";
 
 
 @NgModule({
-  declarations: [BootstrapComponent],
-  imports: [
-
-    P3XHttpCacheInterceptorModule.forRoot({
-      behavior: CachingHeaders.NoCache,
-      store: CachingStore.Global,
-    }),
-    NonCacheRoutingModule,
-    AngularCommonModule,
-    CommonModule,
-    MatDividerModule,
-  ],
-
+    imports: [
+        P3XHttpCacheInterceptorModule.forRoot({
+            behavior: CachingHeaders.NoCache,
+            store: CachingStore.Global,
+        }),
+        NonCacheRoutingModule,
+        AngularCommonModule,
+        CommonModule,
+        MatDividerModule,
+        BootstrapComponent,
+    ],
 })
 export class NonCacheModule { }

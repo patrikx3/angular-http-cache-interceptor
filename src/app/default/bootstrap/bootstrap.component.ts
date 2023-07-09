@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {HighlightService} from "../../common/highlight.service";
+import { DefaultComponentComponent } from '../../common/default-component/default-component.component';
+import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
-  selector: 'p3x-bootstrap',
-  templateUrl: './bootstrap.component.html',
-  styleUrls: ['./bootstrap.component.scss']
+    selector: 'p3x-bootstrap-default',
+    templateUrl: './bootstrap.component.html',
+    styleUrls: ['./bootstrap.component.scss'],
+    standalone: true,
+    imports: [MatDividerModule, DefaultComponentComponent]
 })
 export class BootstrapComponent implements OnInit {
 
@@ -13,7 +17,7 @@ export class BootstrapComponent implements OnInit {
   constructor(private service: HighlightService) { }
 
   ngOnInit(): void {
-      this.defaultSettings = this.service.hljs.highlight('typescript',
+      this.defaultSettings = this.service.hljs.highlight(
 
 `import { P3XHttpCacheInterceptorModule } from 'p3x-angular-http-cache-interceptor';
 
@@ -24,7 +28,7 @@ export class BootstrapComponent implements OnInit {
     CommonModule,
   ]
 })
-export class DefaultModule { }`).value
+export class DefaultModule { }`, { language: 'typescript'}).value
 
   }
 

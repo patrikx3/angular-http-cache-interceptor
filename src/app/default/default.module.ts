@@ -11,16 +11,13 @@ import {P3XHttpCacheInterceptorModule} from '../../../projects/angular-http-cach
 import { MatDividerModule } from "@angular/material/divider";
 
 @NgModule({
-  declarations: [
-    BootstrapComponent,
-  ],
-  imports: [
-    P3XHttpCacheInterceptorModule,
-    AngularCommonModule,
-    DefaultRoutingModule,
-    CommonModule,
-    MatDividerModule,
-  ],
-
+    imports: [
+        P3XHttpCacheInterceptorModule,
+        AngularCommonModule,
+        DefaultRoutingModule,
+        CommonModule,
+        MatDividerModule,
+        BootstrapComponent,
+    ],
 })
 export class DefaultModule { }
