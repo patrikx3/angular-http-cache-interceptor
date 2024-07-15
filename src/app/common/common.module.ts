@@ -4,24 +4,18 @@ import { DefaultComponentComponent } from './default-component/default-component
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatButtonModule} from "@angular/material/button";
 import {MatDividerModule} from "@angular/material/divider";
-import {HttpClientModule} from "@angular/common/http";
+import { provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
 
 import { HighlightService } from "./highlight.service";
 
-@NgModule({
-    imports: [
-        AngularCommonModule,
+@NgModule({ exports: [
+        DefaultComponentComponent,
+    ], imports: [AngularCommonModule,
         MatSnackBarModule,
         MatButtonModule,
         MatDividerModule,
-        HttpClientModule,
-        DefaultComponentComponent,
-    ],
-    providers: [
-        HighlightService
-    ],
-    exports: [
-        DefaultComponentComponent,
-    ]
-})
+        DefaultComponentComponent], providers: [
+        HighlightService,
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class CommonModule { }

@@ -1,5 +1,5 @@
 import {ModuleWithProviders, NgModule} from '@angular/core';
-import {HTTP_INTERCEPTORS} from "@angular/common/http";
+import { HTTP_INTERCEPTORS } from "@angular/common/http";
 import { HttpCacheInterceptorInterceptor } from './http-cache-interceptor.interceptor'
 
 import { P3X_HTTP_CACHE_CONFIG } from "./http-cache-config.token";
