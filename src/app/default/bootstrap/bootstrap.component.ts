@@ -7,7 +7,6 @@ import { MatDividerModule } from '@angular/material/divider';
     selector: 'p3x-bootstrap-default',
     templateUrl: './bootstrap.component.html',
     styleUrls: ['./bootstrap.component.scss'],
-    standalone: true,
     imports: [MatDividerModule, DefaultComponentComponent]
 })
 export class BootstrapComponent implements OnInit {

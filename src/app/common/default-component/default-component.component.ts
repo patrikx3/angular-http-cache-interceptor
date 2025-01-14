@@ -12,8 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
     selector: 'p3x-default-component',
     templateUrl: './default-component.component.html',
     styleUrls: ['./default-component.component.scss'],
-    standalone: true,
-    imports: [MatButtonModule, MatDividerModule],
+    imports: [MatButtonModule, MatDividerModule]
 })
 export class DefaultComponentComponent  {
 

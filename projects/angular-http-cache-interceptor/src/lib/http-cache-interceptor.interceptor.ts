@@ -2,7 +2,7 @@ import {Inject, Injectable, Optional} from '@angular/core';
 import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse } from '@angular/common/http';
 import {Observable, of} from 'rxjs';
 
-import * as hash from 'object-hash'
+import hash from 'object-hash'
 import {tap} from "rxjs/operators";
 
 import {CachingHeaders} from "./caching-headers.enum";

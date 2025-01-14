@@ -14,7 +14,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     selector: 'p3x-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
-    standalone: true,
     imports: [MatToolbarModule, MatTabsModule, NgFor, RouterLinkActive, RouterLink, MatCardModule, MatButtonModule, MatDividerModule, RouterOutlet]
 })
 export class AppComponent implements OnInit {
