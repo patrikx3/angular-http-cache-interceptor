@@ -29,7 +29,7 @@ export class DefaultComponentComponent  {
 
   async loadDefault() {
     try {
-      const response : any = await this.http.get('https://server.patrikx3.com/api/core/util/random/32').toPromise()
+      const response : any = await this.http.get('https://network.corifeus.com/public/api/random/32').toPromise()
       this.snack.open(`The output is based on the default interceptor behavior: ${response.random}`, 'OK', this.defaultSnackbarSettings)
     } catch(e) {
       this.snack.open(`Sorry, error happened, check the console for the error`, 'OK', this.defaultSnackbarSettings)
@@ -40,7 +40,7 @@ export class DefaultComponentComponent  {
 
   async loadCached() {
     try {
-      const response : any = await this.http.get('https://server.patrikx3.com/api/core/util/random/32', {
+      const response : any = await this.http.get('https://network.corifeus.com/public/api/random/32', {
         headers: {
           [CachingHeaders.Cache]: '1',
         }
@@ -54,7 +54,7 @@ export class DefaultComponentComponent  {
 
   async loadNonCached() {
     try {
-      const response : any = await this.http.get('https://server.patrikx3.com/api/core/util/random/16', {
+      const response : any = await this.http.get('https://network.corifeus.com/public/api/random/32', {
         headers: {
           [CachingHeaders.NoCache]: '1',
         }

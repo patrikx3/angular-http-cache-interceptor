@@ -9,13 +9,9 @@
     "declaration": false,
     "experimentalDecorators": true,
     "module": "es2022",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
-    "lib": [
-      "es2022",
-      "dom"
-    ],
     "paths": {
       "angular-http-cache-interceptor": [
         "dist/angular-http-cache-interceptor/angular-http-cache-interceptor",

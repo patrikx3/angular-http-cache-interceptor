@@ -6,7 +6,7 @@ import { Router, RouterLinkActive, RouterLink, RouterOutlet } from "@angular/rou
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { NgFor } from '@angular/common';
+
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
@@ -14,7 +14,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     selector: 'p3x-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
-    imports: [MatToolbarModule, MatTabsModule, NgFor, RouterLinkActive, RouterLink, MatCardModule, MatButtonModule, MatDividerModule, RouterOutlet]
+    imports: [MatToolbarModule, MatTabsModule, RouterLinkActive, RouterLink, MatCardModule, MatButtonModule, MatDividerModule, RouterOutlet]
 })
 export class AppComponent implements OnInit {
 

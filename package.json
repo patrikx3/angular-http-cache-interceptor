@@ -1,19 +1,19 @@
 {
     "name": "p3x-angular-http-cache-interceptor",
-    "version": "2025.4.124",
+    "version": "2026.4.101",
     "corifeus": {
         "icon": "fas fa-fire",
         "prefix": "p3x-",
         "publish": true,
         "type": "p3x",
         "code": "Breeze",
-        "nodejs": "v22.13.1",
+        "nodejs": "v24.14.1",
         "opencollective": false,
         "reponame": "angular-http-cache-interceptor",
         "build": true,
         "cdn": true,
         "publish-location": "./dist/angular-http-cache-interceptor",
-        "angular": "19.1.4"
+        "angular": "21.2.6"
     },
     "description": "🔥 Cache every request in Angular, not only the GET, but all methods of this interceptor, and allows you to interact with the interceptor via specific headers and modify the request, and these specific headers will be not included in the final request",
     "scripts": {
@@ -52,22 +52,22 @@
     },
     "homepage": "https://corifeus.com/angular-http-cache-interceptor",
     "dependencies": {
-        "@angular/animations": "^19.1.4",
-        "@angular/cdk": "^19.1.2",
-        "@angular/common": "^19.1.4",
-        "@angular/compiler": "^19.1.4",
-        "@angular/core": "^19.1.4",
-        "@angular/forms": "^19.1.4",
-        "@angular/material": "^19.1.2",
-        "@angular/platform-browser": "^19.1.4",
-        "@angular/platform-browser-dynamic": "^19.1.4",
-        "@angular/router": "^19.1.4",
-        "@types/node": "^22.13.0",
+        "@angular/animations": "^21.2.6",
+        "@angular/cdk": "^21.2.4",
+        "@angular/common": "^21.2.6",
+        "@angular/compiler": "^21.2.6",
+        "@angular/core": "^21.2.6",
+        "@angular/forms": "^21.2.6",
+        "@angular/material": "^21.2.4",
+        "@angular/platform-browser": "^21.2.6",
+        "@angular/platform-browser-dynamic": "^21.2.6",
+        "@angular/router": "^21.2.6",
+        "@types/node": "^25.5.0",
         "hash": "^0.2.1",
         "highlight.js": "^11.11.1",
         "object": "^0.1.1",
         "object-hash": "^3.0.0",
-        "postcss": "^8.5.1",
+        "postcss": "^8.5.8",
         "rxjs": "~6.6.3",
         "tslib": "^2.2.0",
         "zone.js": "~0.15.0"
@@ -76,16 +76,16 @@
         "p3x-interceptor": "npm:p3x-angular-http-cache-interceptor@^2020.4.304"
     },
     "devDependencies": {
-        "@angular-devkit/build-angular": "^19.1.5",
-        "@angular/cli": "^19.1.5",
-        "@angular/compiler-cli": "^19.1.4",
-        "@angular/language-service": "^19.1.4",
+        "@angular-devkit/build-angular": "^21.2.4",
+        "@angular/cli": "^21.2.4",
+        "@angular/compiler-cli": "^21.2.6",
+        "@angular/language-service": "^21.2.6",
         "@types/highlight.js": "^10.1.0",
         "corifeus-builder": "^2025.4.135",
-        "ng-packagr": "^19.0.1",
+        "ng-packagr": "^21.2.1",
         "ts-node": "~10.9.2",
-        "typescript": "~5.6.3",
-        "webpack-bundle-analyzer": "^4.10.2"
+        "typescript": "~5.9.3",
+        "webpack-bundle-analyzer": "^5.3.0"
     },
     "engines": {
         "node": ">=12.13.0"

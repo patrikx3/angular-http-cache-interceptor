@@ -6,13 +6,14 @@
 <div style="margin: 25px;">
 
   <nav mat-tab-nav-bar [tabPanel]="tabPanel"  backgroundColor="primary" color="accent" style=" border-top-left-radius: 6px; border-top-right-radius: 6px;">
-    <a mat-tab-link
-       *ngFor="let link of navLinks"
-       [routerLink]="link.link"
-       routerLinkActive #rla="routerLinkActive"
-       [active]="rla.isActive">
-      {{link.label}}
-    </a>
+    @for (link of navLinks; track link) {
+      <a mat-tab-link
+        [routerLink]="link.link"
+        routerLinkActive #rla="routerLinkActive"
+        [active]="rla.isActive">
+        {{link.label}}
+      </a>
+    }
   </nav>
 
   <mat-tab-nav-panel #tabPanel>
@@ -34,7 +35,7 @@
         <router-outlet></router-outlet>
       </div>
     </mat-card>
-  
+
   </mat-tab-nav-panel>
   <br/>
 </div>

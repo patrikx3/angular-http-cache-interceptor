@@ -6,7 +6,7 @@
 
 
 
-# 🔥 Cache every request in Angular, not only the GET, but all methods of this interceptor, and allows you to interact with the interceptor via specific headers and modify the request, and these specific headers will be not included in the final request v2025.4.124
+# 🔥 Cache every request in Angular, not only the GET, but all methods of this interceptor, and allows you to interact with the interceptor via specific headers and modify the request, and these specific headers will be not included in the final request v2026.4.101
 
 
   
@@ -22,7 +22,7 @@
 ### 🛠️ Built on NodeJs version
 
 ```txt
-v22.13.1
+v24.14.1
 ```
 
 
@@ -31,7 +31,7 @@ v22.13.1
 # 📦 Built on Angular
 
 ```text
-19.1.4
+21.2.6
 ```
 
 
@@ -141,7 +141,7 @@ export class AppComponent {
 
   async loadCached() {
     try {
-      const response : any = await this.http.get('https://server.patrikx3.com/api/core/util/random/32').toPromise()
+      const response : any = await this.http.get('https://network.corifeus.com/public/api/random/32').toPromise()
       this.snack.open(`Will be always the same: ${response.random}`, 'OK')
     } catch(e) {
       this.snack.open(`Sorry, error happened, check the console for the error`, 'OK')
@@ -151,7 +151,7 @@ export class AppComponent {
 
   async loadNonCached() {
     try {
-      const response : any = await this.http.get('https://server.patrikx3.com/api/core/util/random/32', {
+      const response : any = await this.http.get('https://network.corifeus.com/public/api/random/32', {
         headers: {
           [CachingHeaders.NoCache]: '1'
         }
@@ -213,7 +213,7 @@ All my domains, including [patrikx3.com](https://patrikx3.com), [corifeus.eu](ht
 ---
 
 
-[**P3X-ANGULAR-HTTP-CACHE-INTERCEPTOR**](https://corifeus.com/angular-http-cache-interceptor) Build v2025.4.124
+[**P3X-ANGULAR-HTTP-CACHE-INTERCEPTOR**](https://corifeus.com/angular-http-cache-interceptor) Build v2026.4.101
 
  [![NPM](https://img.shields.io/npm/v/p3x-angular-http-cache-interceptor.svg)](https://www.npmjs.com/package/p3x-angular-http-cache-interceptor)  [![Donate for PatrikX3 / P3X](https://img.shields.io/badge/Donate-PatrikX3-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 
