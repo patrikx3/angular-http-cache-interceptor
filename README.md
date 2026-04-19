@@ -75,94 +75,121 @@ https://angular-http-cache-interceptor.corifeus.com
 npm i p3x-angular-http-cache-interceptor object-hash
 ```
 
-## Include the caching interceptor into your Angular module
+Two ways to register the interceptor — **standalone** (recommended for new code) or **NgModule** (legacy, fully supported).
+
+## Standalone / functional interceptor (Angular 16+)
+
+In your `app.config.ts` (or wherever you build `ApplicationConfig`):
+
+```ts
+import { ApplicationConfig } from '@angular/core';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
+
+import {
+  p3xHttpCacheInterceptor,
+  provideP3xHttpCacheInterceptor,
+  CachingHeaders,
+  CachingStore,
+} from 'p3x-angular-http-cache-interceptor';
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideHttpClient(withInterceptors([p3xHttpCacheInterceptor])),
+    provideP3xHttpCacheInterceptor({
+      behavior: CachingHeaders.Cache,
+      store: CachingStore.Global,
+    }),
+  ],
+};
+```
+
+The functional interceptor also works transparently with `httpResource()` — every call made through `HttpClient` (including `httpResource`) goes through the interceptor chain.
+
+## NgModule (legacy, unchanged)
+
 ```ts
 import { NgModule } from '@angular/core';
 
-import { P3XHttpCacheInterceptorModule  } from 'p3x-angular-http-cache-interceptor';
+import { P3XHttpCacheInterceptorModule } from 'p3x-angular-http-cache-interceptor';
 
 @NgModule({
-  declarations: [
-  ],
   imports: [
-    P3XHttpCacheInterceptorModule,
+    P3XHttpCacheInterceptorModule.forRoot({
+      behavior: CachingHeaders.Cache,
+      store: CachingStore.Global,
+    }),
   ],
-  providers: [
-  ],
-  bootstrap: []
 })
-export class SomeModule { }
+export class SomeModule {}
 ```
 
-### Options
+### Configuration options
+
 ```ts
-import { P3XHttpCacheInterceptorModule, CachingHeaders, CachingStore  } from 'p3x-angular-http-cache-interceptor';
+import { CachingHeaders, CachingStore } from 'p3x-angular-http-cache-interceptor';
 
-P3XHttpCacheInterceptorModule.forRoot({
-    // default request is no cache
-    behavior: CachingHeaders.NoCache,
-    
-    // if a request has CachingHeaders.Cache header it will cache globally
-    store: CachingStore.Global,
-})
+// Opt-in: only cache when the request carries the Cache header
+{
+  behavior: CachingHeaders.NoCache,
+  store: CachingStore.Global,
+}
 
-P3XHttpCacheInterceptorModule.forRoot({
-    // default request is cache
-    behavior: CachingHeaders.Cache,
-
-    // in this config, it will cache not globally, but per module
-    store: CachingStore.PerModule,
-})
+// Opt-out: cache by default, skip when the NoCache header is present
+{
+  behavior: CachingHeaders.Cache,
+  store: CachingStore.PerModule, // class-based only; functional path falls back to Global
+}
 ```
+
+> **Note on `CachingStore.PerModule`:** the functional interceptor has no NgModule instance to own a per-module cache, so `PerModule` is treated as `Global` when using `p3xHttpCacheInterceptor`. The class-based `HttpCacheInterceptorInterceptor` still honours it via its per-instance cache.
 
 ## Example invocation in a component
 
 With and without cache:
+
 ```ts
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { firstValueFrom } from 'rxjs';
 
-import { HttpClient } from "@angular/common/http";
-import {MatSnackBar} from "@angular/material/snack-bar";
-
-import { CachingHeaders } from 'p3x-angular-http-cache-interceptor'
+import { CachingHeaders } from 'p3x-angular-http-cache-interceptor';
 
 @Component({
   selector: 'p3x-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  standalone: true,
 })
 export class AppComponent {
-
-  constructor(
-    private http: HttpClient,
-    private snack: MatSnackBar,
-  ) {
-  }
+  private readonly http = inject(HttpClient);
+  private readonly snack = inject(MatSnackBar);
 
   async loadCached() {
     try {
-      const response : any = await this.http.get('https://network.corifeus.com/public/api/random/32').toPromise()
-      this.snack.open(`Will be always the same: ${response.random}`, 'OK')
-    } catch(e) {
-      this.snack.open(`Sorry, error happened, check the console for the error`, 'OK')
-      console.error(e)
+      const response: any = await firstValueFrom(
+        this.http.get('https://network.corifeus.com/public/api/random/32'),
+      );
+      this.snack.open(`Will be always the same: ${response.random}`, 'OK');
+    } catch (e) {
+      this.snack.open(`Sorry, error happened, check the console for the error`, 'OK');
+      console.error(e);
     }
   }
 
   async loadNonCached() {
     try {
-      const response : any = await this.http.get('https://network.corifeus.com/public/api/random/32', {
-        headers: {
-          [CachingHeaders.NoCache]: '1'
-        }
-      }).toPromise()
-      this.snack.open(`Truly random data: ${response.random}`, 'OK')
-    } catch(e) {
-      this.snack.open(`Sorry, error happened, check the console for the error`, 'OK')
-      console.error(e)
+      const response: any = await firstValueFrom(
+        this.http.get('https://network.corifeus.com/public/api/random/32', {
+          headers: { [CachingHeaders.NoCache]: '1' },
+        }),
+      );
+      this.snack.open(`Truly random data: ${response.random}`, 'OK');
+    } catch (e) {
+      this.snack.open(`Sorry, error happened, check the console for the error`, 'OK');
+      console.error(e);
     }
   }
-
 }
 ```
 

@@ -3,7 +3,8 @@
  */
 
 export * from './lib/http-cache-interceptor.module';
-export * from './lib/caching-headers.enum'
-export * from './lib/http-cache-config'
-export * from './lib/http-cache-config.token'
-export * from './lib/caching-store.enum'
+export * from './lib/http-cache-interceptor.interceptor';
+export * from './lib/caching-headers.enum';
+export * from './lib/http-cache-config';
+export * from './lib/http-cache-config.token';
+export * from './lib/caching-store.enum';

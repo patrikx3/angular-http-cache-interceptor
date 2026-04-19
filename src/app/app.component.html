@@ -5,6 +5,7 @@
 
 <div style="margin: 25px;">
 
+  <div style="max-width: 1100px; margin-left: auto; margin-right: auto;">
   <nav mat-tab-nav-bar [tabPanel]="tabPanel"  backgroundColor="primary" color="accent" style=" border-top-left-radius: 6px; border-top-right-radius: 6px;">
     @for (link of navLinks; track link) {
       <a mat-tab-link
@@ -38,4 +39,5 @@
 
   </mat-tab-nav-panel>
   <br/>
+  </div>
 </div>
