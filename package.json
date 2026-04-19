@@ -1,6 +1,6 @@
 {
     "name": "p3x-angular-http-cache-interceptor",
-    "version": "2026.4.101",
+    "version": "2026.4.102",
     "corifeus": {
         "icon": "fas fa-fire",
         "prefix": "p3x-",
@@ -81,7 +81,7 @@
         "@angular/compiler-cli": "^21.2.6",
         "@angular/language-service": "^21.2.6",
         "@types/highlight.js": "^10.1.0",
-        "corifeus-builder": "^2025.4.135",
+        "corifeus-builder": "^2026.4.143",
         "ng-packagr": "^21.2.1",
         "ts-node": "~10.9.2",
         "typescript": "~5.9.3",
