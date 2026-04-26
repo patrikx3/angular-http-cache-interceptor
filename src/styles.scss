@@ -33,7 +33,7 @@ html {
 
 html, body {
     height: 100%;
-    background-color: #212121;
+    background-color: #0a0a0a !important;
 }
 
 body {
@@ -43,11 +43,37 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-/* M3 `color="primary"` on the toolbar resolves to a light tone in dark
-   mode; force the surface dark to match the page. */
+/* Toolbar + card — all on the same near-black surface so there's no
+   visible step or line between them. */
 .mat-toolbar {
-    background-color: #2a2a2a;
+    background-color: #333333 !important;
     color: rgba(255, 255, 255, 0.87);
+    box-shadow: none !important;
+}
+
+.mat-mdc-card {
+    background-color: #161616 !important;
+}
+
+/* Tab nav bar sits between toolbar and card — darker than the lighter
+   toolbar so the hierarchy body → tabs → toolbar inverts cleanly. */
+.mat-mdc-tab-nav-bar,
+.mat-mdc-tab-header,
+.mat-mdc-tab-links {
+    background-color: #262626 !important;
+}
+
+/* Tab labels — inactive tabs default to a dim dark blue that's hard to
+   read on the dark tab bar. Force a super-light blue for the inactive
+   label and pure white for the active one. */
+.mat-mdc-tab-link .mdc-tab__text-label,
+.mat-mdc-tab .mdc-tab__text-label {
+    color: #bbdefb !important;
+}
+
+.mat-mdc-tab-link.mdc-tab--active .mdc-tab__text-label,
+.mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+    color: #ffffff !important;
 }
 
 /* Breathing room between adjacent MDC buttons — M3 renders them block-width

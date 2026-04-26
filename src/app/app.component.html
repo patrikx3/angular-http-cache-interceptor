@@ -1,12 +1,11 @@
-<mat-toolbar color="primary" [class.mat-elevation-z1]="true">
+<br/>
+<div style="max-width: 1100px; margin: 0 auto 18px; padding-left: 10px; padding-right: 10px;">
+
+<mat-toolbar color="primary" style="border-top-left-radius: 6px; border-top-right-radius: 6px;">
   <span class="mat-body-strong ellipsis">P3X Angular HTTP Cache Interceptor v{{ version }}</span>
 </mat-toolbar>
 
-
-<div style="margin: 25px;">
-
-  <div style="max-width: 1100px; margin-left: auto; margin-right: auto;">
-  <nav mat-tab-nav-bar [tabPanel]="tabPanel"  backgroundColor="primary" color="accent" style=" border-top-left-radius: 6px; border-top-right-radius: 6px;">
+  <nav mat-tab-nav-bar [tabPanel]="tabPanel"  backgroundColor="primary" color="accent">
     @for (link of navLinks; track link) {
       <a mat-tab-link
         [routerLink]="link.link"
@@ -18,16 +17,16 @@
   </nav>
 
   <mat-tab-nav-panel #tabPanel>
-    <mat-card style=" border-top-left-radius: 0px; border-top-right-radius: 0px; padding-top: 0;">
-      <div>
+    <mat-card style=" border-top-left-radius: 0px; border-top-right-radius: 0px; padding-top: 0; border-bottom-left-radius: 6px; border-bottom-right-radius: 6px;">
+      <div style="text-align: center;">
         <a class="link-fix" mat-button color="accent" href="https://corifeus.com/angular-http-cache-interceptor" target="_blank">Corifeus P3X Angular HTTP Cache Interceptor</a>
       </div>
       <mat-divider></mat-divider>
-      <div>
+      <div style="text-align: center;">
         <a class="link-fix" mat-button color="accent" href="https://github.com/patrikx3/angular-http-cache-interceptor" target="_blank">GitHub</a>
       </div>
       <mat-divider></mat-divider>
-      <div>
+      <div style="text-align: center;">
         <a class="link-fix" mat-button color="accent" href="https://www.npmjs.com/package/p3x-angular-http-cache-interceptor" target="_blank">NpmJS</a>
       </div>
       <mat-divider></mat-divider>
@@ -39,5 +38,4 @@
 
   </mat-tab-nav-panel>
   <br/>
-  </div>
 </div>
