@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import {Component, ViewEncapsulation, ChangeDetectionStrategy} from '@angular/core';
 
 import { HttpClient } from "@angular/common/http";
 import {MatSnackBar, MatSnackBarConfig} from "@angular/material/snack-bar";
@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
     selector: 'p3x-default-component',
     templateUrl: './default-component.component.html',
     styleUrls: ['./default-component.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [MatButtonModule, MatDividerModule]
 })
 export class DefaultComponentComponent  {

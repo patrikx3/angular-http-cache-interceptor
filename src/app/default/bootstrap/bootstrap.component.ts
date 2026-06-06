@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import {HighlightService} from "../../common/highlight.service";
 import { DefaultComponentComponent } from '../../common/default-component/default-component.component';
 import { MatDividerModule } from '@angular/material/divider';
@@ -7,6 +7,7 @@ import { MatDividerModule } from '@angular/material/divider';
     selector: 'p3x-bootstrap-default',
     templateUrl: './bootstrap.component.html',
     styleUrls: ['./bootstrap.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [MatDividerModule, DefaultComponentComponent]
 })
 export class BootstrapComponent implements OnInit {

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
 
 
 import packageInfo from '../../package.json';
@@ -14,6 +14,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     selector: 'p3x-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [MatToolbarModule, MatTabsModule, RouterLinkActive, RouterLink, MatCardModule, MatButtonModule, MatDividerModule, RouterOutlet]
 })
 export class AppComponent implements OnInit {

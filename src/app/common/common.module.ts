@@ -4,7 +4,7 @@ import { DefaultComponentComponent } from './default-component/default-component
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatButtonModule} from "@angular/material/button";
 import {MatDividerModule} from "@angular/material/divider";
-import { provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
+import { provideHttpClient, withInterceptorsFromDi, withXhr } from "@angular/common/http";
 
 import { HighlightService } from "./highlight.service";
 
@@ -16,6 +16,6 @@ import { HighlightService } from "./highlight.service";
         MatDividerModule,
         DefaultComponentComponent], providers: [
         HighlightService,
-        provideHttpClient(withInterceptorsFromDi())
+        provideHttpClient(withXhr(), withInterceptorsFromDi())
     ] })
 export class CommonModule { }
