@@ -337,9 +337,9 @@
     tslib "^2.3.0"
 
 "@angular/core@^22.0.0":
-  version "22.0.0"
-  resolved "https://registry.yarnpkg.com/@angular/core/-/core-22.0.0.tgz#7ce944acbbcaa43efda5386a0a5cced093818ed2"
-  integrity sha512-H4lzunB+LUNylQ3hZGYWDz1NfNAdFzPdOadwuS6VpPyxF4Ti0MLyAfx7NDnyTrmdY2/PFx8I6jXrveNlIsORXg==
+  version "22.0.1"
+  resolved "https://registry.yarnpkg.com/@angular/core/-/core-22.0.1.tgz#df0eab0325b9ebb130bed8398c8b55b863850274"
+  integrity sha512-Sk0fz+LR2q6QhJJtCV9ElN1GzoEX6lOB4difMqpOC0yRh/ue+9iKd+x3RRiL4p+dnAiRLQYAKqsXkYlqUm2SMg==
   dependencies:
     tslib "^2.3.0"
 
