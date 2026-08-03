@@ -309,9 +309,9 @@
     zod "4.4.2"
 
 "@angular/common@^22.0.0":
-  version "22.0.0"
-  resolved "https://registry.yarnpkg.com/@angular/common/-/common-22.0.0.tgz#8e84fdf7244bc7b3a7e393ee16628bf1e6bae9f4"
-  integrity sha512-O9Qk60/OQQuZXMeXRfOpsq+/B609nd5KIxjSZFddRQUfSMZrdvVDNK0irjgYVKGDkMx3dqCiQ8a4nAIdGy7V6A==
+  version "22.0.2"
+  resolved "https://registry.yarnpkg.com/@angular/common/-/common-22.0.2.tgz#985017d57f31af9b0ccf0f8c00f082b892d89000"
+  integrity sha512-XSkHYRwrM54v4GZ+fg9KU1KbSIE/iQF33VXKo5zqVNKO11MnAbJ59qzyqX/5EzSeogHyBoHApprFKACsCAKm/Q==
   dependencies:
     tslib "^2.3.0"
 
